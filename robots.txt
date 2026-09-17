@@ -3,4 +3,4 @@ Allow: /
 Disallow: /offer.html
 Disallow: /privacy.html
 
-Sitemap: https://ВАШ-ДОМЕН.ru/sitemap.xml
+Sitemap: https://gringotods-creator.github.io/screen-recorder-hd-site/sitemap.xml
