@@ -1,0 +1,8 @@
+version: 1.1.0
+files:
+  - url: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.1.0/ScreenRecorderHD-Setup-1.1.0.exe
+    sha512: qtemXiZnJuti2ss7fCEBWkY+JePTfzf1xJvvA2mN0Rz+c/UAIWc/XnBAgbEvSpApvzwV199SrITD3rQhCrxxuQ==
+    size: 133831720
+path: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.1.0/ScreenRecorderHD-Setup-1.1.0.exe
+sha512: qtemXiZnJuti2ss7fCEBWkY+JePTfzf1xJvvA2mN0Rz+c/UAIWc/XnBAgbEvSpApvzwV199SrITD3rQhCrxxuQ==
+releaseDate: '2026-09-17T15:01:37.066Z'
