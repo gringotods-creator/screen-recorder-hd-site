@@ -5,4 +5,4 @@ Disallow: /privacy.html
 Disallow: /thank-you-windows.html
 Disallow: /thank-you-mac.html
 
-Sitemap: https://gringotods-creator.github.io/screen-recorder-hd-site/sitemap.xml
+Sitemap: https://rekorderhd.ru/sitemap.xml
