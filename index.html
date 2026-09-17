@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Экранный Рекордер HD — запись экрана со звуком для Windows</title>
+<meta name="description" content="Программа для записи экрана в Full HD/4K с одновременной записью звука компьютера и микрофона. Без подписок, работает офлайн, готовый MP4 на выходе. Для Windows 10/11." />
+<meta name="keywords" content="запись экрана, программа для записи экрана, скринкаст со звуком, рекордер экрана Windows, запись видео с микрофоном и звуком компьютера, HD запись экрана" />
+<link rel="canonical" href="https://ВАШ-ДОМЕН.ru/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Экранный Рекордер HD — запись экрана со звуком для Windows" />
+<meta property="og:description" content="Записывайте экран в HD/4K со звуком компьютера и микрофоном одновременно. Без подписок и интернета." />
+<meta property="og:locale" content="ru_RU" />
+
+<!-- Подтверждение прав на сайт в Яндекс.Вебмастере: замените на свой код -->
+<meta name="yandex-verification" content="ВАШ-КОД-ПОДТВЕРЖДЕНИЯ" />
+
+<style>
+  :root {
+    --bg: #0f1115;
+    --bg-panel: #171922;
+    --text: #e8e9ec;
+    --muted: #9a9ca5;
+    --accent: #e5484d;
+    --accent-hover: #c93f43;
+    --border: #262832;
+    --light-bg: #ffffff;
+    --light-panel: #f6f6f8;
+    --light-text: #1b1d23;
+    --light-muted: #5b5e68;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--light-bg);
+    color: var(--light-text);
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    background: radial-gradient(circle at top, #1c1f28, var(--bg) 60%);
+    color: var(--text);
+    padding: 64px 0 80px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 48px;
+    font-weight: 600;
+  }
+  nav .links { display: flex; gap: 24px; font-weight: 400; font-size: 14px; color: var(--muted); }
+  nav .links a:hover { color: var(--text); }
+
+  .hero-content { max-width: 640px; }
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero p.lead {
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary { background: var(--accent); color: white; }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--muted); }
+
+  section { padding: 72px 0; }
+  h2 { font-size: clamp(22px, 3vw, 30px); margin-bottom: 12px; }
+  .section-lead { color: var(--light-muted); margin-bottom: 40px; max-width: 600px; }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .feature-card {
+    background: var(--light-panel);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .feature-card .icon { font-size: 24px; margin-bottom: 12px; }
+  .feature-card h3 { font-size: 16px; margin-bottom: 8px; }
+  .feature-card p { font-size: 14px; color: var(--light-muted); }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    counter-reset: step;
+  }
+  .step { position: relative; padding-left: 44px; }
+  .step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 32px; height: 32px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .step h3 { font-size: 15px; margin-bottom: 6px; }
+  .step p { font-size: 14px; color: var(--light-muted); }
+
+  #pricing { background: var(--light-panel); }
+  .price-card {
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  }
+  .price-card .price { font-size: 40px; font-weight: 700; margin: 12px 0; }
+  .price-card .price span { font-size: 16px; font-weight: 400; color: var(--light-muted); }
+  .price-card ul { list-style: none; text-align: left; margin: 24px 0; font-size: 14px; }
+  .price-card ul li { padding: 6px 0; color: var(--light-muted); }
+  .price-card ul li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+  .price-card .btn-primary { width: 100%; }
+  .price-note { text-align: center; color: var(--light-muted); font-size: 13px; margin-top: 16px; }
+
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-question .sign { color: var(--accent); font-size: 20px; }
+  .faq-answer {
+    display: none;
+    padding: 0 0 20px;
+    color: var(--light-muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .faq-item.open .faq-answer { display: block; }
+
+  footer {
+    background: var(--bg);
+    color: var(--muted);
+    padding: 40px 0;
+    font-size: 13px;
+  }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--muted); text-decoration: none; margin-left: 16px; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 640px) {
+    nav .links { display: none; }
+    footer .container { flex-direction: column; }
+    footer a { margin: 0 12px 0 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <nav>
+      <div>Экранный Рекордер HD</div>
+      <div class="links">
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Цена</a>
+        <a href="#faq">Вопросы</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1>Записывайте экран в HD со звуком и своими комментариями</h1>
+      <p class="lead">Программа для Windows, которая пишет экран, звук компьютера и микрофон одновременно — без подписок, без интернета, без ограничений по времени записи.</p>
+      <div class="cta-row">
+        <a href="#pricing" class="btn btn-primary">Купить и скачать</a>
+        <a href="#features" class="btn btn-secondary">Что умеет программа</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="container">
+    <h2>Всё, что нужно для качественной записи</h2>
+    <p class="section-lead">Ничего лишнего — только то, что реально нужно для обучающих видео, демонстраций и стримов.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">🎥</div>
+        <h3>HD и 4K на выбор</h3>
+        <p>1080p, 1440p или 4K, 30 или 60 кадров в секунду — под любую задачу и мощность компьютера.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔊</div>
+        <h3>Звук компьютера + микрофон</h3>
+        <p>Записывайте то, что играет на компьютере, и свой голос-комментарий одновременно, без сторонних миксеров.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">💾</div>
+        <h3>Пишет сразу на диск</h3>
+        <p>Видео сохраняется на диск по ходу записи — можно писать часами, не боясь потерять запись при сбое.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">⏸️</div>
+        <h3>Пауза и продолжение</h3>
+        <p>Остановились на середине — не страшно. Поставьте на паузу и продолжите запись позже.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📝</div>
+        <h3>Комментарий к записи</h3>
+        <p>Оставляйте текстовую заметку к каждой записи, чтобы не потеряться в папке с видео.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔒</div>
+        <h3>Без интернета и подписок</h3>
+        <p>Работает полностью локально на вашем компьютере. Разовая оплата — программа ваша навсегда.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background: var(--light-panel);">
+  <div class="container">
+    <h2>Как это работает</h2>
+    <p class="section-lead">Три шага от установки до готового видео.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>Установите программу</h3>
+        <p>Скачайте установщик, запустите — мастер установки сам всё настроит за минуту.</p>
+      </div>
+      <div class="step">
+        <h3>Выберите, что записывать</h3>
+        <p>Экран или отдельное окно, качество видео, микрофон — всё в одном простом окне.</p>
+      </div>
+      <div class="step">
+        <h3>Нажмите «Начать запись»</h3>
+        <p>Комментируйте происходящее голосом. По кнопке «Стоп» получите готовый файл MP4.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <h2 style="text-align:center;">Стоимость</h2>
+    <p class="section-lead" style="margin-left:auto;margin-right:auto;text-align:center;">Разовая оплата — без ежемесячной подписки.</p>
+    <div class="price-card">
+      <div>Полная версия навсегда</div>
+      <div class="price">490 ₽</div>
+      <ul>
+        <li>Все функции без ограничений</li>
+        <li>Установка на 1 компьютер</li>
+        <li>Обновления включены</li>
+        <li>Поддержка по почте</li>
+      </ul>
+      <a href="#" class="btn btn-primary" id="buyButton">Купить и получить ключ</a>
+    </div>
+    <p class="price-note">После оплаты лицензионный ключ и ссылка на установщик придут на вашу почту.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2>Частые вопросы</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">Windows пишет «Windows защитила ваш компьютер» — это вирус? <span class="sign">+</span></button>
+        <div class="faq-answer">Нет. Это стандартное предупреждение Windows SmartScreen для новых программ без дорогой цифровой подписи. Нажмите «Подробнее» → «Выполнить в любом случае». Программа полностью безопасна и не содержит вредоносного кода.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Антивирус блокирует установку — что делать? <span class="sign">+</span></button>
+        <div class="faq-answer">Некоторые антивирусы настороженно относятся к любым программам, которые могут записывать экран и микрофон — это нормальная защитная реакция, а не признак реальной угрозы. Добавьте программу в исключения антивируса.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Не записывается звук с компьютера (только микрофон) <span class="sign">+</span></button>
+        <div class="faq-answer">Убедитесь, что в программе включена галочка «Захватывать звук системы». Если звука всё равно нет — проверьте, что в Windows звук воспроизводится через стандартное устройство вывода, а не через специфичное аудио-ПО (виртуальные аудиокабели, эксклюзивный режим устройства).</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Не работает микрофон <span class="sign">+</span></button>
+        <div class="faq-answer">Проверьте в Windows: Параметры → Конфиденциальность и безопасность → Микрофон — доступ приложениям к микрофону должен быть включён.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Запись тормозит или зависает <span class="sign">+</span></button>
+        <div class="faq-answer">Запись в 4K или 60 кадров/сек требует достаточно мощного процессора. Если компьютер слабый — выберите в настройках качество 1080p при 30 кадрах/сек.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Куда сохраняются записи? <span class="sign">+</span></button>
+        <div class="faq-answer">В папку «Видео → ScreenRecorderHD» на вашем компьютере. Открыть её можно прямо из программы кнопкой «Открыть папку с записями».</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Как активировать программу? <span class="sign">+</span></button>
+        <div class="faq-answer">После оплаты вы получите лицензионный ключ на почту. При первом запуске программа попросит вставить его — просто скопируйте ключ из письма целиком.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Можно ли вернуть деньги? <span class="sign">+</span></button>
+        <div class="faq-answer">Да, если программа не работает на вашем компьютере и мы не смогли помочь решить проблему — напишите нам, вернём оплату согласно условиям публичной оферты.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Экранный Рекордер HD</div>
+    <div>
+      <a href="offer.html">Публичная оферта</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="mailto:ВАША-ПОЧТА@example.com">Написать нам</a>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Экранный Рекордер HD",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "MultimediaApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "490",
+    "priceCurrency": "RUB"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Windows пишет «Windows защитила ваш компьютер» — это вирус?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Нет, это стандартное предупреждение Windows SmartScreen для новых программ без дорогой цифровой подписи. Нужно нажать «Подробнее» и «Выполнить в любом случае»." }
+    },
+    {
+      "@type": "Question",
+      "name": "Не записывается звук с компьютера, только микрофон",
+      "acceptedAnswer": { "@type": "Answer", "text": "Проверьте, что в программе включена галочка «Захватывать звук системы», а звук в Windows выводится через стандартное устройство." }
+    },
+    {
+      "@type": "Question",
+      "name": "Как активировать программу?",
+      "acceptedAnswer": { "@type": "Answer", "text": "После оплаты вы получите лицензионный ключ на почту и вводите его при первом запуске программы." }
+    }
+  ]
+}
+</script>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.classList.toggle('open');
+      btn.querySelector('.sign').textContent = btn.parentElement.classList.contains('open') ? '−' : '+';
+    });
+  });
+
+  // TODO: как только создадите кассу в ЮKassa — сделайте там "Ссылку на оплату"
+  // (Кабинет ЮKassa → Продажи → Ссылка на оплату) на нужную сумму и вставьте
+  // её сюда вместо "#". Тогда этот JS-обработчик можно будет удалить целиком.
+  document.getElementById('buyButton').addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Здесь будет ссылка на оплату из личного кабинета ЮKassa — пока касса не создана.');
+  });
+</script>
+
+</body>
+</html>
