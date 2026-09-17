@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Спасибо за покупку — Экранный Рекордер HD</title>
+<meta name="robots" content="noindex" />
+<style>
+  :root {
+    --bg: #12151b;
+    --surface: #1b1f28;
+    --text: #eef0f4;
+    --muted: #8b93a7;
+    --accent: #ff5a36;
+    --accent-2: #ffb454;
+    --line: #2a2f3d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    padding: 24px;
+  }
+  .card {
+    max-width: 480px;
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+  }
+  .check {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: rgba(255,90,54,0.15);
+    color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+  }
+  h1 { font-size: 22px; margin: 0 0 12px; }
+  p { color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0 0 24px; }
+  .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #16110d;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  .btn:hover { background: #ff6f4f; }
+  .note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .note b { color: var(--text); }
+  a.plain { color: var(--accent-2); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="check">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+    </div>
+    <h1>Спасибо за покупку!</h1>
+    <p>Оплата прошла успешно. Скачайте установщик для Windows — это версия для вашей операционной системы.</p>
+    <a class="btn" href="https://disk.yandex.ru/d/qhyH2AFpWPDMlQ">Скачать для Windows</a>
+    <div class="note">
+      <b>Лицензионный ключ</b> придёт на почту, указанную при оплате, в течение 24 часов.<br><br>
+      При первом запуске программа попросит ввести ключ — просто вставьте его из письма целиком.<br><br>
+      Возникли вопросы? Пишите: <a class="plain" href="mailto:gringotods@gmail.com">gringotods@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>
