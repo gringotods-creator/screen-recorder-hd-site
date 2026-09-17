@@ -371,8 +371,8 @@
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Поддержка по почте</li>
       </ul>
       <div class="os-buttons">
-        <a href="#" class="btn btn-primary os-btn" id="buyWindowsBtn" data-os="Windows">Купить для Windows</a>
-        <a href="#" class="btn btn-primary os-btn" id="buyMacBtn" data-os="Mac">Купить для Mac</a>
+        <a href="https://yookassa.ru/my/i/aqvKhgAwAdLq/l" class="btn btn-primary os-btn" id="buyWindowsBtn" data-os="Windows">Купить для Windows</a>
+        <a href="https://yookassa.ru/my/i/aqvK2pL4LSTS/l" class="btn btn-primary os-btn" id="buyMacBtn" data-os="Mac">Купить для Mac</a>
       </div>
     </div>
   </section>
@@ -596,19 +596,6 @@
       item.classList.toggle('open');
       btn.querySelector('.sign').textContent = item.classList.contains('open') ? '−' : '+';
     });
-  });
-
-  // TODO: создайте в ЮKassa ДВЕ отдельные "Ссылки на оплату" — одну для Windows,
-  // одну для Mac (с разным названием товара в каждой). Тогда в личном кабинете
-  // ЮKassa у каждого платежа сразу видно, под какую ОС выдавать ключ — уточнять
-  // у покупателя ничего не нужно. Вставьте обе ссылки сюда вместо "#".
-  document.getElementById('buyWindowsBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('Здесь будет ссылка на оплату версии для Windows из ЮKassa.');
-  });
-  document.getElementById('buyMacBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('Здесь будет ссылка на оплату версии для Mac из ЮKassa.');
   });
 </script>
 </body>
