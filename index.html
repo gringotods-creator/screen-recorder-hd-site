@@ -179,7 +179,8 @@
   .price-card ul { list-style: none; padding: 0; margin: 24px 0; text-align: left; font-size: 14px; }
   .price-card li { padding: 7px 0; color: var(--muted); display: flex; gap: 10px; }
   .price-card li svg { flex-shrink: 0; color: var(--accent); }
-  .price-card .btn-primary { width: 100%; justify-content: center; }
+  .os-buttons { display: flex; gap: 10px; margin-top: 4px; }
+  .os-btn { flex: 1; justify-content: center; font-size: 14px; padding: 14px 10px; }
 
   /* faq */
   .faq-item { border-bottom: 1px solid var(--line); }
@@ -204,6 +205,7 @@
     .spec-row { grid-template-columns: 1.2fr 1fr 1fr; font-size: 12px; }
     nav.links { display: none; }
     #scrubTrack .tick span { display: none; }
+    .os-buttons { flex-direction: column; }
   }
 
   /* живая аудио-волна в rec-бейдже */
@@ -368,7 +370,10 @@
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Обновления включены</li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Поддержка по почте</li>
       </ul>
-      <a href="#" class="btn btn-primary">Купить и получить ключ</a>
+      <div class="os-buttons">
+        <a href="#" class="btn btn-primary os-btn" id="buyWindowsBtn" data-os="Windows">Купить для Windows</a>
+        <a href="#" class="btn btn-primary os-btn" id="buyMacBtn" data-os="Mac">Купить для Mac</a>
+      </div>
     </div>
   </section>
 
@@ -591,6 +596,19 @@
       item.classList.toggle('open');
       btn.querySelector('.sign').textContent = item.classList.contains('open') ? '−' : '+';
     });
+  });
+
+  // TODO: создайте в ЮKassa ДВЕ отдельные "Ссылки на оплату" — одну для Windows,
+  // одну для Mac (с разным названием товара в каждой). Тогда в личном кабинете
+  // ЮKassa у каждого платежа сразу видно, под какую ОС выдавать ключ — уточнять
+  // у покупателя ничего не нужно. Вставьте обе ссылки сюда вместо "#".
+  document.getElementById('buyWindowsBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Здесь будет ссылка на оплату версии для Windows из ЮKassa.');
+  });
+  document.getElementById('buyMacBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Здесь будет ссылка на оплату версии для Mac из ЮKassa.');
   });
 </script>
 </body>
