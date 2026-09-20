@@ -284,6 +284,18 @@
     text-align: right; padding: 6px 0 2px;
   }
 
+  /* видео-виджет */
+  .video-widget { position: relative; max-width: 960px; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: #000; aspect-ratio: 16 / 9; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6); }
+  .video-widget video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .video-widget .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, rgba(18,21,27,0.15), rgba(18,21,27,0.55)); border: none; cursor: pointer; width: 100%; padding: 0; }
+  .video-widget .play-btn { width: 96px; height: 96px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 12px rgba(255,90,54,0.25); transition: transform .2s ease; }
+  .video-widget .play-overlay:hover .play-btn { transform: scale(1.08); }
+  .video-widget .play-label { position: absolute; left: 24px; bottom: 20px; font-family: 'IBM Plex Mono'; font-size: 14px; color: var(--text); background: rgba(18,21,27,0.8); border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px; }
+  .video-widget.playing .play-overlay { display: none; }
+  .video-transcript { max-width: 960px; margin: 18px auto 0; color: var(--muted); font-size: 14px; }
+  .video-transcript summary { cursor: pointer; color: var(--text); }
+  .video-transcript p { margin: 10px 0 0; line-height: 1.6; }
+
   /* наплыв: секции проявляются при скролле, как переход между кадрами */
   .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -314,6 +326,7 @@
   <header class="top">
     <div class="brand"><span class="rec-dot"></span>Экранный рекордер HD</div>
     <nav class="links">
+      <a href="#demo">Видео</a>
       <a href="#features">Возможности</a>
       <a href="#compare">Сравнение</a>
       <a href="#pricing">Цена</a>
@@ -343,6 +356,26 @@
       <video class="hero-video" autoplay muted loop playsinline preload="auto" src="hero-demo.mp4"></video>
       
     </div>
+  </section>
+
+  <section id="demo" class="reveal">
+    <div class="section-head">
+      <h2>Посмотрите, как это работает: 30 секунд</h2>
+      <p>Запись экрана компьютера со звуком, микрофоном и камерой в одном видео.</p>
+    </div>
+    <div class="video-widget" id="videoWidget">
+      <video id="promoVideo" preload="none" playsinline poster="/media/ekrannyj-rekorder-promo-poster.webp" title="Запись экрана на компьютере со звуком: Экранный рекордер HD за 30 секунд">
+        <source src="/media/ekrannyj-rekorder-promo.mp4" type="video/mp4" />
+      </video>
+      <button class="play-overlay" id="playOverlay" type="button" aria-label="Смотреть видео: запись экрана со звуком за 30 секунд">
+        <span class="play-btn"><svg width="36" height="36" viewBox="0 0 24 24" fill="#16110d"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="play-label">0:29 · со звуком</span>
+      </button>
+    </div>
+    <details class="video-transcript">
+      <summary>Текст ролика</summary>
+      <p>Ищешь идеальную программу для записи экрана компьютера? Записывай свои стримы, гайды, обучающие ролики в HD и 4K качестве, часами и без перерывов. «Экранный рекордер HD» пишет всё и сразу: экран, звук компьютера и микрофон. Нажал «Rec» — получил готовое видео. Без подписок, платишь всего один раз, и он твой навсегда.</p>
+    </details>
   </section>
 
   <section id="features" class="reveal">
@@ -594,6 +627,26 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Запись экрана на компьютере со звуком: Экранный рекордер HD за 30 секунд",
+  "description": "Как записать экран компьютера со звуком компьютера и микрофоном в HD и 4K: программа Экранный рекордер HD для Windows и macOS. Нажал Rec — получил готовое видео.",
+  "thumbnailUrl": [
+    "https://rekorderhd.ru/media/ekrannyj-rekorder-promo-poster.jpg"
+  ],
+  "uploadDate": "2026-09-21",
+  "duration": "PT29S",
+  "contentUrl": "https://rekorderhd.ru/media/ekrannyj-rekorder-promo.mp4",
+  "inLanguage": "ru",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Экранный рекордер HD",
+    "url": "https://rekorderhd.ru/"
+  }
+}
+</script>
 
 <script>
   try {
@@ -665,6 +718,19 @@
       const idx = Math.round(ratio * (sections.length - 1));
       sections[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  } catch (e) {}
+
+  try {
+    const widget = document.getElementById('videoWidget');
+    const pv = document.getElementById('promoVideo');
+    const ov = document.getElementById('playOverlay');
+    ov.addEventListener('click', () => {
+      pv.controls = true;
+      widget.classList.add('playing');
+      pv.play();
+      try { ym(112751075, 'reachGoal', 'video_play'); } catch (e) {}
+    });
+    pv.addEventListener('ended', () => { widget.classList.remove('playing'); pv.controls = false; });
   } catch (e) {}
 
   document.querySelectorAll('.faq-question').forEach((btn) => {
