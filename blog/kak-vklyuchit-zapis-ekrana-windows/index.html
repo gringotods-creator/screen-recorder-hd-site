@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Как включить запись экрана на компьютере Windows 10 и 11: пошаговая инструкция</title>
+<meta name="description" content="Как включить и запустить запись экрана на Windows 10 и 11: Xbox Game Bar (Win+G, Win+Alt+R) и «Ножницы» (Win+Shift+R). Что делать, если запись не работает." />
+<link rel="canonical" href="https://rekorderhd.ru/blog/kak-vklyuchit-zapis-ekrana-windows/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Как включить запись экрана на компьютере Windows 10 и 11: пошаговая инструкция" />
+<meta property="og:description" content="Как включить и запустить запись экрана на Windows 10 и 11: Xbox Game Bar (Win+G, Win+Alt+R) и «Ножницы» (Win+Shift+R). Что делать, если запись не работает." />
+<meta property="og:locale" content="ru_RU" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<!-- Яндекс.Метрика, счётчик 112751075 -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(112751075, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112751075" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Как включить запись экрана на компьютере Windows 10 и 11: пошаговая инструкция", "description": "Как включить и запустить запись экрана на Windows 10 и 11: Xbox Game Bar (Win+G, Win+Alt+R) и «Ножницы» (Win+Shift+R). Что делать, если запись не работает.", "datePublished": "2026-09-21", "dateModified": "2026-09-21", "inLanguage": "ru", "mainEntityOfPage": "https://rekorderhd.ru/blog/kak-vklyuchit-zapis-ekrana-windows/", "author": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" }, "publisher": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" } }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://rekorderhd.ru/" }, { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://rekorderhd.ru/blog/" }, { "@type": "ListItem", "position": 3, "name": "Как включить запись экрана на Windows" } ] }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    { "@type": "Question", "name": "Какими клавишами включить запись экрана на Windows?", "acceptedAnswer": { "@type": "Answer", "text": "Откройте игровую панель сочетанием Win+G, а начать и остановить запись можно сочетанием Win+Alt+R. На Windows 11 область экрана также записывается через «Ножницы»: Win+Shift+R." } },
+    { "@type": "Question", "name": "Почему Win+G ничего не делает?", "acceptedAnswer": { "@type": "Answer", "text": "Чаще всего Xbox Game Bar выключена в настройках. Откройте «Параметры → Игры» и включите её. Если не помогло, сбросьте приложение: «Параметры → Приложения → Установленные приложения → Xbox Game Bar → Дополнительные параметры → Сбросить»." } },
+    { "@type": "Question", "name": "Что значит ошибка «компьютер не соответствует аппаратным требованиям для записи»?", "acceptedAnswer": { "@type": "Answer", "text": "Game Bar использует аппаратный кодировщик видео видеокарты. Если он не поддерживается или драйвер устарел, запись не запускается. Проверьте раздел GPU в «Диспетчере задач» и обновите драйвер видеокарты." } },
+    { "@type": "Question", "name": "Можно ли записать рабочий стол через Game Bar?", "acceptedAnswer": { "@type": "Answer", "text": "Нет, Game Bar записывает окно приложения. Для всего экрана нужна другая программа, например OBS или рекордер." } }
+  ] }
+</script>
+<style>
+  :root { --bg:#12151b; --surface:#1b1f28; --surface2:#232838; --text:#eef0f4; --muted:#9aa2b5; --accent:#ff5a36; --accent2:#ffb454; --line:#2a2f3d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "IBM Plex Sans", system-ui, sans-serif; line-height: 1.7; font-size: 17px; }
+  a { color: var(--accent2); }
+  header.top { max-width: 1000px; margin: 0 auto; padding: 22px 16px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  header.top a.brand { color: var(--text); text-decoration: none; font-family: "Unbounded", sans-serif; font-size: 15px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(255,90,54,0.2); }
+  header.top nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+  header.top nav a:hover { color: var(--text); }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 64px; }
+  .crumbs { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .crumbs a { color: var(--muted); }
+  h1 { font-family: "Unbounded", sans-serif; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; margin: 0 0 16px; }
+  h2 { font-family: "Unbounded", sans-serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.25; margin: 48px 0 14px; }
+  h3 { font-size: 19px; margin: 28px 0 8px; }
+  p { margin: 0 0 16px; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .answer { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 18px 22px; margin: 22px 0 28px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 22px; margin: 0 0 12px; }
+  .toc b { display: block; margin-bottom: 6px; font-size: 15px; }
+  .toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+  .toc a { text-decoration: none; }
+  .tablewrap { overflow-x: auto; margin: 18px 0 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 15px; }
+  th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--surface2); font-weight: 600; }
+  td.yes { color: #7fdc9e; } td.no { color: #ff8e7a; }
+  ol.steps, ul.list { padding-left: 22px; margin: 0 0 16px; }
+  ol.steps li, ul.list li { margin-bottom: 8px; }
+  kbd { background: var(--surface2); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-family: "IBM Plex Mono", monospace; font-size: 14px; }
+  .note { background: rgba(255,180,84,0.08); border: 1px solid rgba(255,180,84,0.35); border-radius: 12px; padding: 14px 20px; margin: 20px 0; font-size: 15px; }
+  figure { margin: 22px 0; }
+  figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .cta { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 30px 0; }
+  .cta p { margin: 0 0 14px; }
+  .btn { display: inline-block; background: var(--accent); color: #16110d; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 10px; }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); margin-left: 8px; }
+  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 48px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 600px) { body { font-size: 16px; } .btn.ghost { margin: 10px 0 0; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><span class="dot"></span>Экранный рекордер HD</a>
+  <nav><a href="/blog/">Блог</a><a href="/#pricing">Цена</a></nav>
+</header>
+<main>
+  <div class="crumbs"><a href="/">Главная</a> / <a href="/blog/">Блог</a> / Как включить запись экрана на Windows</div>
+  <h1>Как включить запись экрана на компьютере Windows 10 и 11: пошаговая инструкция</h1>
+  <div class="meta">Обновлено 21.09.2026 · чтение 6 минут</div>
+
+  <div class="answer"><p><b>Коротко.</b> Нажмите <kbd>Win</kbd>+<kbd>G</kbd>, откроется игровая панель (Xbox Game Bar), затем <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>, чтобы начать запись, и ещё раз, чтобы остановить. Если ничего не происходит, скорее всего, панель выключена в настройках: откройте «Параметры → Игры» и включите её.</p></div>
+
+  <p>Знакомая ситуация: нужно быстро записать инструкцию для коллеги, вы нажимаете <kbd>Win</kbd>+<kbd>G</kbd>, а ничего не происходит. Или запись пошла, но в кадре только одно окно, а нужен весь экран. Запись экрана встроена в Windows, но по умолчанию её не всегда видно, а у части компьютеров она не запускается. Ниже: как включить и что делать, если не получается. Про все способы записи (в том числе программы) есть отдельная <a href="/blog/zapis-ekrana-windows/">статья про запись экрана на Windows</a>.</p>
+
+  <h2>Windows 10 и Windows 11: что доступно</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Средство</th><th>Windows 10</th><th>Windows 11</th><th>Что записывает</th></tr>
+    <tr><td><b>Xbox Game Bar</b> (<kbd>Win</kbd>+<kbd>G</kbd>)</td><td>Есть</td><td>Есть</td><td>Окно приложения</td></tr>
+    <tr><td><b>«Ножницы»</b> (<kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>)</td><td class="no">Нет записи видео</td><td>Есть</td><td>Выбранную область экрана</td></tr>
+  </table></div>
+  <p>Важно: Game Bar записывает окно приложения, а не рабочий стол и не Проводник Windows. Если вам нужен весь экран, встроенных средств недостаточно (см. последний раздел).</p>
+
+  <h2>Как включить запись через Xbox Game Bar</h2>
+  <ol class="steps">
+    <li>Откройте «Параметры» (<kbd>Win</kbd>+<kbd>I</kbd>) и перейдите в раздел «Игры».</li>
+    <li>Найдите Xbox Game Bar и убедитесь, что она включена.</li>
+    <li>Откройте приложение, которое хотите записать (браузер, редактор, игру).</li>
+    <li>Нажмите <kbd>Win</kbd>+<kbd>G</kbd>, откроется панель. В виджете «Запись» нажмите кнопку записи или сразу используйте <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>.</li>
+    <li>Чтобы остановить запись, снова нажмите <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>. Готовое видео обычно лежит в папке «Видео → Клипы».</li>
+  </ol>
+
+  <h2>Как включить запись в «Ножницах» (Windows 11)</h2>
+  <ol class="steps">
+    <li>Нажмите <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>.</li>
+    <li>Выделите мышью область, которую нужно записать.</li>
+    <li>Нажмите «Начать». Если нужен звук, включите значки микрофона (и звука системы, если они есть в вашей версии приложения) до начала записи.</li>
+    <li>Остановите запись кнопкой сверху экрана и сохраните файл.</li>
+  </ol>
+  <div class="note">Если значков звука нет, обновите приложение «Ножницы» через Microsoft Store: набор функций зависит от версии.</div>
+
+  <h2>Запись не работает: что проверить</h2>
+  <ol class="steps">
+    <li><b>Game Bar выключена.</b> «Параметры → Игры» и включите. Это самая частая причина, из-за которой <kbd>Win</kbd>+<kbd>G</kbd> ничего не делает.</li>
+    <li><b>Сбросьте приложение.</b> «Параметры → Приложения → Установленные приложения → Xbox Game Bar → Дополнительные параметры → Сбросить».</li>
+    <li><b>Ошибка про аппаратные требования.</b> Game Bar использует аппаратный кодировщик видеокарты. Откройте «Диспетчер задач → Производительность → GPU» и посмотрите, есть ли график «Video Encode». Если его нет, запись через Game Bar на этом компьютере может не запускаться. Обновите драйвер видеокарты.</li>
+    <li><b>Windows редакции N.</b> Для записи может понадобиться пакет мультимедийных функций (Media Feature Pack) от Microsoft.</li>
+    <li><b>Полноэкранная игра.</b> Попробуйте оконный режим: в полноэкранном записи бывают сбои.</li>
+  </ol>
+
+  <h2>Когда встроенных средств мало</h2>
+  <p>Game Bar не пишет рабочий стол и Проводник, «Ножницы» есть только на Windows 11 и записывают область. А ещё каждый раз приходится вспоминать сочетания клавиш, проверять звук и надеяться, что запись запустится. Если вы записываете экран регулярно (уроки, инструкции, отчёты), удобнее отдельный рекордер: вы открываете окно, выбираете экран или окно, ставите две галочки (звук компьютера и микрофон) и нажимаете «Начать запись». Готовый файл сразу в MP4.</p>
+  <figure><img src="/blog/img/okno-programmy.webp" alt="Окно программы Экранный рекордер HD: источник записи, качество, микрофон и кнопка Начать запись" width="900" height="964" loading="lazy" /><figcaption>Окно программы: источник записи, качество, микрофон и звук системы в одном окне.</figcaption></figure>
+  <p>Так работает «Экранный рекордер HD»: запись всего экрана со звуком компьютера и микрофоном, паузой и кружком камеры поверх экрана, без интернета. Платить нужно один раз, <b>490 ₽ без подписки</b>. Установщик можно скачать бесплатно и посмотреть, как всё выглядит, а ключ активации приходит после оплаты.</p>
+  <div class="cta"><p><b>Хватит вспоминать сочетания клавиш.</b> Экран, звук и голос в одном окне: 490 ₽ один раз, Windows и Mac.</p><a class="btn" href="/#pricing">Скачать и попробовать</a><a class="btn ghost" href="/blog/zapis-ekrana-windows/">Сравнение способов</a></div>
+
+  <h2>Частые вопросы</h2>
+  <details><summary>Какими клавишами включить запись экрана на Windows?</summary><p>Откройте игровую панель сочетанием Win+G, а начать и остановить запись можно сочетанием Win+Alt+R. На Windows 11 область экрана также записывается через «Ножницы»: Win+Shift+R.</p></details>
+  <details><summary>Почему Win+G ничего не делает?</summary><p>Чаще всего Xbox Game Bar выключена в настройках. Откройте «Параметры → Игры» и включите её. Если не помогло, сбросьте приложение: «Параметры → Приложения → Установленные приложения → Xbox Game Bar → Дополнительные параметры → Сбросить».</p></details>
+  <details><summary>Что значит ошибка «компьютер не соответствует аппаратным требованиям для записи»?</summary><p>Game Bar использует аппаратный кодировщик видео видеокарты. Если он не поддерживается или драйвер устарел, запись не запускается. Проверьте раздел GPU в «Диспетчере задач» и обновите драйвер видеокарты.</p></details>
+  <details><summary>Можно ли записать рабочий стол через Game Bar?</summary><p>Нет, Game Bar записывает окно приложения. Для всего экрана нужна другая программа, например OBS или рекордер.</p></details>
+</main>
+<footer>
+  <p>Статья подготовлена командой «Экранный рекордер HD». Инструкции по встроенным средствам Windows составлены по открытым источникам; сочетания клавиш и интерфейс могут отличаться в зависимости от версии системы. <a href="/">rekorderhd.ru</a></p>
+</footer>
+</body>
+</html>
