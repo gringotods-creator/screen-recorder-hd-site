@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Как установить Экранный Рекордер HD на Mac — пошаговая инструкция</title>
+<meta name="description" content="Пошаговая инструкция по установке и первому запуску Экранного Рекордера HD на Mac (Apple Silicon): перенос в «Программы», разрешение запуска, доступ к записи экрана и микрофону." />
+<link rel="canonical" href="https://rekorderhd.ru/install-mac.html" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<style>
+  :root {
+    --bg: #12151b;
+    --surface: #1b1f28;
+    --text: #eef0f4;
+    --muted: #8b93a7;
+    --accent: #ff5a36;
+    --accent-2: #ffb454;
+    --line: #2a2f3d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    padding: 32px 16px 64px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  a { color: var(--accent-2); }
+  h1 { font-size: 26px; margin: 0 0 8px; }
+  .lead { color: var(--muted); margin: 0 0 28px; }
+  .steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+  .steps li {
+    counter-increment: s;
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 20px 20px 64px;
+    margin-bottom: 12px;
+  }
+  .steps li::before {
+    content: counter(s);
+    position: absolute; left: 20px; top: 20px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: rgba(255,90,54,0.15); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+  }
+  .steps b { display: block; margin-bottom: 4px; }
+  .steps span { color: var(--muted); font-size: 15px; }
+  code {
+    display: block; margin-top: 8px; padding: 10px 12px;
+    background: #0d0f14; border: 1px solid var(--line); border-radius: 8px;
+    color: var(--accent-2); font-size: 13px; overflow-x: auto; white-space: nowrap;
+  }
+  .warn {
+    background: rgba(255,180,84,0.08); border: 1px solid rgba(255,180,84,0.35);
+    border-radius: 14px; padding: 16px 20px; margin: 20px 0; font-size: 15px;
+  }
+  .btn {
+    display: inline-block; padding: 14px 22px; border-radius: 10px;
+    background: var(--accent); color: #16110d; text-decoration: none; font-weight: 700;
+  }
+  h2 { font-size: 18px; margin: 32px 0 10px; }
+  .muted { color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Установка на Mac</h1>
+    <p class="lead">Версия для Mac с процессорами Apple Silicon (M1, M2, M3 и новее), macOS 13 и новее. Программа не имеет платной подписи Apple, поэтому при первом запуске macOS попросит подтвердить запуск — это нужно сделать один раз.</p>
+
+    <p><a class="btn" href="https://disk.yandex.ru/d/qAqZT2R2NyBHIQ">Скачать для Mac</a></p>
+
+    <h2>Шаги</h2>
+    <ol class="steps">
+      <li><b>Откройте скачанный файл</b><span>Дважды щёлкните по файлу <i>ScreenRecorderHD-1.1.0-arm64.dmg</i> — откроется окно с иконкой программы.</span></li>
+      <li><b>Перетащите программу в «Программы»</b><span>Перетащите иконку «Экранный рекордер HD» в папку «Программы» (Applications). Не запускайте её прямо из окна образа.</span></li>
+      <li><b>Запустите из «Программ»</b><span>Откройте «Программы» и дважды щёлкните по «Экранный рекордер HD». Появится предупреждение, что Apple не удалось проверить программу.</span></li>
+      <li><b>В предупреждении нажмите «Готово»</b><span>Именно «Готово». Кнопку «Переместить в Корзину» нажимать не нужно — иначе программа удалится.</span></li>
+      <li><b>Разрешите запуск в настройках</b><span>Откройте «Системные настройки» → «Конфиденциальность и безопасность», прокрутите вниз до строки про «Экранный рекордер HD» и нажмите «Всё равно открыть». Введите пароль или приложите палец к Touch ID и подтвердите «Открыть». Дальше программа открывается обычным двойным щелчком.</span></li>
+      <li><b>Разрешите доступ к экрану и микрофону</b><span>При первой записи macOS спросит доступ к записи экрана и микрофону. Разрешите: «Системные настройки» → «Конфиденциальность и безопасность» → «Запись экрана» и «Микрофон» → включите для программы. Затем перезапустите программу.</span></li>
+      <li><b>Введите лицензионный ключ</b><span>При первом запуске вставьте ключ из письма целиком.</span></li>
+    </ol>
+
+    <div class="warn">
+      <b>Если macOS пишет, что приложение «повреждено»</b><br>
+      Откройте «Терминал» (через Spotlight: Cmd + Пробел, слово «Терминал») и выполните команду, затем запустите программу снова:
+      <code>xattr -cr "/Applications/Экранный рекордер HD.app"</code>
+    </div>
+
+    <p class="muted">Что-то не получается? Напишите: <a href="mailto:gringotods@gmail.com">gringotods@gmail.com</a> — приложите скриншот того, что видите на экране.</p>
+    <p class="muted"><a href="/">← На главную</a></p>
+  </div>
+</body>
+</html>
