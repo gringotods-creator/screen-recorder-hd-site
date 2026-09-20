@@ -730,7 +730,28 @@
       pv.play();
       try { ym(112751075, 'reachGoal', 'video_play'); } catch (e) {}
     });
-    pv.addEventListener('ended', () => { widget.classList.remove('playing'); pv.controls = false; });
+    pv.addEventListener('ended', () => {
+      widget.classList.remove('playing'); pv.controls = false;
+      try { ym(112751075, 'reachGoal', 'video_complete'); } catch (e) {}
+    });
+  } catch (e) {}
+
+  // Цели Яндекс.Метрики: клики по скачиванию и покупке
+  try {
+    const goal = (name, params) => { try { ym(112751075, 'reachGoal', name, params); } catch (e) {} };
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const sec = a.closest('section'); const place = sec ? (sec.id || (sec.classList.contains('hero') ? 'hero' : 'page')) : 'page';
+      if (a.id === 'buyWindowsBtn') { goal('buy_win', { place }); goal('buy_any', { os: 'win', place }); }
+      else if (a.id === 'buyMacBtn') { goal('buy_mac', { place }); goal('buy_any', { os: 'mac', place }); }
+      else if (a.classList.contains('dl-link')) {
+        const t = a.textContent; const href = a.getAttribute('href') || '';
+        if (href.indexOf('install-mac') !== -1) goal('install_mac_guide', { place });
+        else if (t.indexOf('Windows') !== -1) { goal('download_win', { place }); goal('download_any', { os: 'win', place }); }
+        else if (t.indexOf('Mac') !== -1) { goal('download_mac', { place }); goal('download_any', { os: 'mac', place }); }
+      }
+    });
   } catch (e) {}
 
   document.querySelectorAll('.faq-question').forEach((btn) => {
