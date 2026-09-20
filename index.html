@@ -296,6 +296,15 @@
   .video-transcript summary { cursor: pointer; color: var(--text); }
   .video-transcript p { margin: 10px 0 0; line-height: 1.6; }
 
+  /* оффер: заработок на видео */
+  .offer-card { position: relative; max-width: 960px; margin: 0 auto; padding: 44px; border-radius: 20px; border: 1px solid rgba(255,180,84,0.45); background: linear-gradient(135deg, rgba(255,90,54,0.14), rgba(255,180,84,0.08) 55%, rgba(27,31,40,0.9)); box-shadow: 0 30px 60px -30px rgba(255,90,54,0.35); }
+  .offer-tag { display: inline-block; font-family: 'IBM Plex Mono'; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-2); border: 1px solid rgba(255,180,84,0.5); border-radius: 999px; padding: 6px 14px; margin-bottom: 18px; }
+  .offer-card h2 { font-size: clamp(24px, 3.4vw, 36px); line-height: 1.2; margin-bottom: 14px; }
+  .offer-card p { color: #c9cfdd; font-size: 16px; line-height: 1.65; max-width: 62ch; margin: 0 0 20px; }
+  .offer-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 26px; padding: 0; list-style: none; }
+  .offer-chips li { font-size: 14px; padding: 8px 16px; border-radius: 999px; background: rgba(18,21,27,0.7); border: 1px solid var(--line); color: var(--text); }
+  @media (max-width: 800px) { .offer-card { padding: 28px 22px; } }
+
   /* наплыв: секции проявляются при скролле, как переход между кадрами */
   .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -415,6 +424,18 @@
       <div class="step"><h3>Установите</h3><p>Скачайте установщик для <a href="https://github.com/gringotods-creator/screen-recorder-hd-site/releases/latest/download/ScreenRecorderHD-Windows-Setup.exe" class="dl-link">Windows 10/11</a> или <a href="https://github.com/gringotods-creator/screen-recorder-hd-site/releases/latest/download/ScreenRecorderHD-Mac-arm64.dmg" class="dl-link">Mac</a> (<a href="install-mac.html" class="dl-link">инструкция</a>), запустите — минута.</p></div>
       <div class="step"><h3>Выберите источник</h3><p>Экран, окно, качество, микрофон — в одном окне.</p></div>
       <div class="step"><h3>Нажмите Rec</h3><p>Говорите, что комментируете. «Стоп» — и файл готов.</p></div>
+    </div>
+  </section>
+
+  <section id="earn" class="reveal">
+    <div class="offer-card">
+      <span class="offer-tag">Идея для заработка</span>
+      <h2>Как заработать на видео с «Экранным рекордером HD»: 6 идей для YouTube и других площадок</h2>
+      <p>Геймплеи с вашими комментариями и кружком камеры, гайды по поисковым запросам, обучающие видео, обзоры программ и видеоинструкции на заказ. Что записывать, как это делать и куда выкладывать готовые ролики.</p>
+      <ul class="offer-chips">
+        <li>Геймплеи</li><li>Гайды «как сделать»</li><li>Обучение и курсы</li><li>Обзоры</li><li>Записи на заказ</li>
+      </ul>
+      <a id="earnLink" class="btn btn-primary" href="/blog/kak-zarabotat-na-zapisi-ekrana/">Читать статью →</a>
     </div>
   </section>
 
@@ -745,6 +766,7 @@
       const sec = a.closest('section'); const place = sec ? (sec.id || (sec.classList.contains('hero') ? 'hero' : 'page')) : 'page';
       if (a.id === 'buyWindowsBtn') { goal('buy_win', { place }); goal('buy_any', { os: 'win', place }); }
       else if (a.id === 'buyMacBtn') { goal('buy_mac', { place }); goal('buy_any', { os: 'mac', place }); }
+      else if (a.id === 'earnLink') { goal('earn_article_click', { place }); }
       else if (a.classList.contains('dl-link')) {
         const t = a.textContent; const href = a.getAttribute('href') || '';
         if (href.indexOf('install-mac') !== -1) goal('install_mac_guide', { place });
