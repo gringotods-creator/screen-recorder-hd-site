@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Запись экрана на компьютере с Windows 10 и 11: встроенные средства и программы</title>
+<meta name="description" content="Как записать экран компьютера на Windows 10 и 11: Xbox Game Bar, «Ножницы», OBS и программа для записи со звуком. Пошаговые инструкции, сравнение и что выбрать под вашу задачу." />
+<link rel="canonical" href="https://rekorderhd.ru/blog/zapis-ekrana-windows/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Как сделать запись экрана на компьютере с Windows: встроенные средства и программы" />
+<meta property="og:description" content="Xbox Game Bar, «Ножницы», OBS и программа для записи со звуком: инструкции и сравнение." />
+<meta property="og:locale" content="ru_RU" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Яндекс.Метрика, счётчик 112751075 -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(112751075, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112751075" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как сделать запись экрана на компьютере с Windows: встроенные средства и программы",
+  "description": "Как записать экран компьютера на Windows 10 и 11: Xbox Game Bar, «Ножницы», OBS и программа для записи со звуком.",
+  "datePublished": "2026-09-21",
+  "dateModified": "2026-09-21",
+  "inLanguage": "ru",
+  "mainEntityOfPage": "https://rekorderhd.ru/blog/zapis-ekrana-windows/",
+  "author": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" },
+  "publisher": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" },
+  "image": "https://rekorderhd.ru/blog/img/okno-programmy.webp"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://rekorderhd.ru/" },
+    { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://rekorderhd.ru/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Запись экрана на компьютере с Windows" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Почему в записи нет звука?", "acceptedAnswer": { "@type": "Answer", "text": "Звук компьютера и микрофон записываются отдельно, и каждый нужно включить. В Xbox Game Bar проверьте виджет «Аудио», в «Ножницах» на Windows 11 переключатели звука над областью записи (в новых сборках), в программе для записи включите оба источника. Если звука нет вообще, проверьте устройство вывода по умолчанию в настройках звука Windows." } },
+    { "@type": "Question", "name": "Можно ли записать весь рабочий стол через Xbox Game Bar?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Game Bar записывает окно открытого приложения и не записывает рабочий стол и Проводник. Для записи всего экрана нужна другая программа, например OBS или специальный рекордер." } },
+    { "@type": "Question", "name": "Есть ли встроенная запись экрана на Windows 10?", "acceptedAnswer": { "@type": "Answer", "text": "На Windows 10 встроена только запись через Xbox Game Bar (сочетание Win+Alt+R), которая работает с окном приложения. Запись «Ножницами» появилась в Windows 11." } },
+    { "@type": "Question", "name": "Как записать экран компьютера часами без обрывов?", "acceptedAnswer": { "@type": "Answer", "text": "Выбирайте программу, которая пишет файл на диск по мере записи, а не копит его в памяти. Проверьте свободное место на диске заранее: минута записи в 1080p занимает десятки мегабайт." } },
+    { "@type": "Question", "name": "Что лучше для записи экрана на слабом ноутбуке?", "acceptedAnswer": { "@type": "Answer", "text": "Снизьте разрешение до 1080p и частоту до 30 кадров в секунду, закройте лишние программы. Запись в 4K или 60 кадров требует более мощного процессора." } }
+  ]
+}
+</script>
+<style>
+  :root { --bg:#12151b; --surface:#1b1f28; --surface2:#232838; --text:#eef0f4; --muted:#9aa2b5; --accent:#ff5a36; --accent2:#ffb454; --line:#2a2f3d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "IBM Plex Sans", system-ui, sans-serif; line-height: 1.7; font-size: 17px; }
+  a { color: var(--accent2); }
+  header.top { max-width: 1000px; margin: 0 auto; padding: 22px 16px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  header.top a.brand { color: var(--text); text-decoration: none; font-family: "Unbounded", sans-serif; font-size: 15px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(255,90,54,0.2); }
+  header.top nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+  header.top nav a:hover { color: var(--text); }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 64px; }
+  .crumbs { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .crumbs a { color: var(--muted); }
+  h1 { font-family: "Unbounded", sans-serif; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; margin: 0 0 16px; }
+  h2 { font-family: "Unbounded", sans-serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.25; margin: 48px 0 14px; }
+  h3 { font-size: 19px; margin: 28px 0 8px; }
+  p { margin: 0 0 16px; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .answer { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 18px 22px; margin: 22px 0 28px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 22px; margin: 0 0 12px; }
+  .toc b { display: block; margin-bottom: 6px; font-size: 15px; }
+  .toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+  .toc a { text-decoration: none; }
+  .tablewrap { overflow-x: auto; margin: 18px 0 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 15px; }
+  th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--surface2); font-weight: 600; }
+  td.yes { color: #7fdc9e; } td.no { color: #ff8e7a; }
+  ol.steps, ul.list { padding-left: 22px; margin: 0 0 16px; }
+  ol.steps li, ul.list li { margin-bottom: 8px; }
+  kbd { background: var(--surface2); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-family: "IBM Plex Mono", monospace; font-size: 14px; }
+  .note { background: rgba(255,180,84,0.08); border: 1px solid rgba(255,180,84,0.35); border-radius: 12px; padding: 14px 20px; margin: 20px 0; font-size: 15px; }
+  figure { margin: 22px 0; }
+  figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .cta { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 30px 0; }
+  .cta p { margin: 0 0 14px; }
+  .btn { display: inline-block; background: var(--accent); color: #16110d; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 10px; }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); margin-left: 8px; }
+  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 48px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 600px) { body { font-size: 16px; } .btn.ghost { margin: 10px 0 0; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><span class="dot"></span>Экранный рекордер HD</a>
+  <nav><a href="/blog/">Блог</a><a href="/#pricing">Цена</a></nav>
+</header>
+
+<main>
+  <div class="crumbs"><a href="/">Главная</a> / <a href="/blog/">Блог</a> / Запись экрана на Windows</div>
+
+  <h1>Как сделать запись экрана на компьютере с Windows: встроенные средства и программы</h1>
+  <div class="meta">Обновлено 21 сентября 2026 · чтение 8 минут</div>
+
+  <div class="answer">
+    <p><b>Коротко.</b> Если нужно быстро записать одно приложение, нажмите <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd> (Xbox Game Bar). На Windows 11 область экрана можно записать через «Ножницы»: <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>. Если нужен весь рабочий стол, звук компьютера с микрофоном и длинная запись, потребуется программа: бесплатная OBS или простой рекордер.</p>
+  </div>
+
+  <div class="toc">
+    <b>В статье</b>
+    <ol>
+      <li><a href="#compare">Сравнение способов</a></li>
+      <li><a href="#gamebar">Способ 1. Xbox Game Bar (Windows 10 и 11)</a></li>
+      <li><a href="#snip">Способ 2. «Ножницы» (Windows 11)</a></li>
+      <li><a href="#obs">Способ 3. OBS Studio</a></li>
+      <li><a href="#recorder">Способ 4. Программа «Экранный рекордер HD»</a></li>
+      <li><a href="#sound">Как записать звук: компьютер и микрофон</a></li>
+      <li><a href="#faq">Частые проблемы</a></li>
+      <li><a href="#choose">Что выбрать</a></li>
+    </ol>
+  </div>
+
+  <p>Запись экрана нужна для уроков, отчётов, инструкций для коллег, обзоров игр и программ. Способов записать экран на Windows несколько. Разберём четыре: два встроенных и две программы. Для каждого покажем, что он умеет, где ограничен и как им пользоваться.</p>
+
+  <p>Мы делаем программу «Экранный рекордер HD», поэтому она в списке тоже есть. Остальные способы описаны честно, в том числе бесплатные.</p>
+
+  <h2 id="compare">Сравнение способов</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Способ</th><th>Что записывает</th><th>Звук</th><th>Ограничение</th></tr>
+    <tr><td><b>Xbox Game Bar</b><br>Windows 10 и 11</td><td>Окно одного приложения</td><td>Звук приложения и микрофон</td><td class="no">Не пишет рабочий стол и Проводник</td></tr>
+    <tr><td><b>«Ножницы»</b><br>Только Windows 11</td><td>Выбранную область экрана</td><td>Микрофон, а звук системы в новых сборках</td><td class="no">Нужна Windows 11; набор функций зависит от версии приложения</td></tr>
+    <tr><td><b>OBS Studio</b><br>Бесплатно</td><td>Экран, окно, камеру, что угодно</td><td>Звук компьютера и микрофон</td><td class="no">Нужна настройка сцен и источников, для разовой записи сложно</td></tr>
+    <tr><td><b>Экранный рекордер HD</b><br>490 ₽ один раз</td><td>Весь экран или окно, камера в кружке</td><td>Звук компьютера и микрофон одновременно</td><td class="no">Платная (нужен ключ), не для прямых эфиров</td></tr>
+  </table>
+  </div>
+
+  <h2 id="gamebar">Способ 1. Xbox Game Bar (Windows 10 и 11)</h2>
+  <p>Игровая панель встроена в Windows и предназначена для игр, но подходит и для записи любого открытого приложения.</p>
+  <ol class="steps">
+    <li>Откройте нужное приложение (браузер, редактор, игру).</li>
+    <li>Нажмите <kbd>Win</kbd>+<kbd>G</kbd>, откроется игровая панель. Если ничего не происходит, включите её в «Параметры → Игры → Xbox Game Bar».</li>
+    <li>Нажмите кнопку записи в виджете «Запись» или сразу сочетание <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>.</li>
+    <li>Чтобы остановить запись, нажмите <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd> ещё раз. Видео появится в папке клипов.</li>
+  </ol>
+  <div class="note"><b>Главное ограничение.</b> Game Bar записывает окно приложения, а не рабочий стол и не Проводник Windows. Для записи «всего, что на экране» он не подходит.</div>
+
+  <h2 id="snip">Способ 2. «Ножницы» (Windows 11)</h2>
+  <p>На Windows 11 приложение «Ножницы» умеет не только делать снимки, но и записывать видео выбранной области.</p>
+  <ol class="steps">
+    <li>Нажмите <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>.</li>
+    <li>Выделите область экрана мышью.</li>
+    <li>Над областью включите нужные значки звука (микрофон, а в новых версиях приложения и звук системы) и нажмите «Начать».</li>
+    <li>Остановите запись кнопкой в верхней части экрана и сохраните файл.</li>
+  </ol>
+  <div class="note"><b>Оговорка.</b> Возможности звука зависят от версии приложения: если значков нет, обновите «Ножницы» через Microsoft Store. На Windows 10 запись видео в «Ножницах» недоступна.</div>
+
+  <h2 id="obs">Способ 3. OBS Studio</h2>
+  <p>OBS Studio бесплатна и очень гибкая, её выбирают стримеры и блогеры. Но она рассчитана на тех, кто готов разобраться в сценах и источниках.</p>
+  <ol class="steps">
+    <li>Скачайте OBS с официального сайта и установите.</li>
+    <li>В блоке «Источники» нажмите «+» и выберите «Захват экрана» (или «Захват окна»).</li>
+    <li>В «Микшере» проверьте, что включены звук рабочего стола и микрофон.</li>
+    <li>Откройте «Настройки → Вывод» и выберите папку и формат сохранения (при необходимости MP4).</li>
+    <li>Нажмите «Начать запись», а по окончании «Остановить запись».</li>
+  </ol>
+  <p><b>Когда подходит:</b> нужна сложная сцена, несколько источников, прямые эфиры. <b>Когда избыточна:</b> нужно просто записать экран с голосом раз в неделю.</p>
+
+  <h2 id="recorder">Способ 4. Программа «Экранный рекордер HD»</h2>
+  <p>Это простой рекордер для Windows и Mac: выбираете экран или окно, ставите две галочки (звук компьютера и микрофон) и нажимаете «Начать запись».</p>
+  <figure>
+    <img src="/blog/img/okno-programmy.webp" alt="Окно программы Экранный рекордер HD: выбор источника записи, качество, микрофон и кнопка Начать запись" width="900" height="964" loading="lazy" />
+    <figcaption>Окно программы: источник записи, качество, микрофон и звук системы в одном окне.</figcaption>
+  </figure>
+  <p><b>Что умеет:</b></p>
+  <ul class="list">
+    <li>запись всего экрана или отдельного окна;</li>
+    <li>звук компьютера и микрофон одновременно;</li>
+    <li>качество Full HD (30 и 60 кадров/с), 1440p и 4K (30 кадров/с), готовый файл в формате MP4;</li>
+    <li>запись сразу на диск, поэтому длинные записи не копятся в памяти;</li>
+    <li>пауза и продолжение, комментарий к записи;</li>
+    <li>круглая камера поверх экрана при записи всего экрана;</li>
+    <li>работает без интернета.</li>
+  </ul>
+  <p><b>Что важно знать:</b> программа платная, разовая оплата 490 ₽ без подписки. Скачать установщик можно бесплатно, но для записи нужен лицензионный ключ. Она предназначена для записи, а не для прямых трансляций. На Mac работает на компьютерах с процессорами Apple Silicon, на Windows 10 и 11.</p>
+
+  <div class="cta">
+    <p><b>Хотите попробовать?</b> Скачайте установщик и посмотрите, как выглядит программа. Ключ активации приходит после оплаты.</p>
+    <a class="btn" href="/#pricing">Цена и скачивание</a>
+    <a class="btn ghost" href="/#features">Что внутри</a>
+  </div>
+
+  <h2 id="sound">Как записать звук: компьютер и микрофон</h2>
+  <p>Запись экрана с голосом складывается из двух отдельных звуков, и включать их нужно порознь:</p>
+  <ul class="list">
+    <li><b>Звук компьютера</b>: то, что играет в колонках или наушниках (музыка, видео, звуки игры). Иногда его называют «системным звуком».</li>
+    <li><b>Микрофон</b>: ваш голос.</li>
+  </ul>
+  <p>Если включён только один источник, второго в записи не будет. Перед важной записью сделайте короткий тест на 10 секунд и прослушайте результат.</p>
+
+  <h2 id="faq">Частые проблемы</h2>
+  <details><summary>Почему в записи нет звука?</summary><p>Звук компьютера и микрофон включаются отдельно. В Game Bar проверьте виджет «Аудио», в «Ножницах» значки звука над областью записи, в программе оба переключателя. Если звука нет вообще, проверьте устройство вывода по умолчанию в настройках звука Windows.</p></details>
+  <details><summary>Можно ли записать весь рабочий стол через Game Bar?</summary><p>Нет. Он пишет окно приложения, но не рабочий стол и не Проводник. Для всего экрана нужна другая программа.</p></details>
+  <details><summary>Есть ли встроенная запись экрана на Windows 10?</summary><p>Да, но только через Xbox Game Bar (<kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>) и только для окна приложения. Запись «Ножницами» появилась в Windows 11.</p></details>
+  <details><summary>Как записывать экран часами без обрывов?</summary><p>Используйте программу, которая пишет файл на диск по ходу записи, и заранее проверьте свободное место. Запись в 1080p занимает десятки мегабайт в минуту.</p></details>
+  <details><summary>Что выбрать для слабого ноутбука?</summary><p>Снизьте разрешение до 1080p и частоту до 30 кадров в секунду, закройте лишние программы. Запись в 4K и 60 кадров требует мощного процессора.</p></details>
+
+  <h2 id="choose">Что выбрать</h2>
+  <ul class="list">
+    <li><b>Нужно быстро записать одно окно</b> (пример: браузер) → Xbox Game Bar, ничего ставить не надо.</li>
+    <li><b>Windows 11 и нужна область экрана</b> → «Ножницы».</li>
+    <li><b>Готовы разбираться, нужны эфиры и сложные сцены</b> → OBS Studio, бесплатно.</li>
+    <li><b>Нужно записать весь экран со звуком и голосом, без настройки, в том числе надолго</b> → простой рекордер вроде «Экранного рекордера HD».</li>
+  </ul>
+
+  <div class="cta">
+    <p><b>«Экранный рекордер HD»</b>: экран, звук компьютера и микрофон в одной записи, готовый MP4. Windows и Mac, 490 ₽ один раз.</p>
+    <a class="btn" href="/">Посмотреть программу</a>
+  </div>
+</main>
+
+<footer>
+  <p>Статья подготовлена командой «Экранный рекордер HD». Инструкции по встроенным средствам Windows составлены по открытым источникам; сочетания клавиш и интерфейс могут отличаться в зависимости от версии системы. <a href="/">rekorderhd.ru</a></p>
+</footer>
+</body>
+</html>
