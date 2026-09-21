@@ -231,6 +231,7 @@
     .spec-row { grid-template-columns: 1.2fr 1fr 1fr; font-size: 12px; }
     nav.links { display: none; }
     #scrubTrack .tick span { display: none; }
+    #scrubRow { padding: 10px 8px 6px; }
     .os-buttons { flex-direction: column; }
   }
 
@@ -249,7 +250,7 @@
   @keyframes wave-pulse { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
 
   /* скраббер таймлайна в липкой панели */
-  #scrubRow { padding: 10px 0 2px; }
+  #scrubRow { padding: 10px 28px 22px; }
   #scrubTrack {
     position: relative;
     height: 4px;
@@ -281,7 +282,7 @@
   }
   #scrubTimecode {
     font-family: 'IBM Plex Mono'; font-size: 11px; color: var(--muted);
-    text-align: right; padding: 6px 0 2px;
+    text-align: right; min-width: 40px;
   }
 
   /* видео-виджет */
@@ -318,6 +319,7 @@
   <div style="display:flex;justify-content:space-between;align-items:center;">
     <div class="name">Экранный рекордер HD</div>
     <div class="right">
+      <span id="scrubTimecode">00:00</span>
       <span class="price">490 ₽</span>
       <a href="#pricing" class="btn btn-primary" style="padding:9px 18px;font-size:13px;">Купить</a>
     </div>
@@ -327,7 +329,6 @@
       <div id="scrubFill"></div>
       <div id="scrubHead"></div>
     </div>
-    <div id="scrubTimecode">00:00</div>
   </div>
 </div>
 
@@ -715,16 +716,18 @@
     const fill = document.getElementById('scrubFill');
     const head = document.getElementById('scrubHead');
     const timecode = document.getElementById('scrubTimecode');
-    const sections = ['features', 'compare', 'how', 'pricing', 'faq']
-      .map((id) => document.getElementById(id))
-      .filter(Boolean);
+    const defs = [['demo', 'Видео'], ['features', 'Возможности'], ['compare', 'Сравнение'], ['how', 'Как работает'], ['earn', 'Заработок'], ['pricing', 'Цена'], ['faq', 'Вопросы']]
+      .map(([id, label]) => ({ el: document.getElementById(id), label }))
+      .filter((d) => d.el);
+    const sections = defs.map((d) => d.el);
+    const n = defs.length;
 
-    sections.forEach((sec, i) => {
+    defs.forEach((d, i) => {
       const tick = document.createElement('div');
       tick.className = 'tick';
-      tick.style.left = (i / (sections.length - 1)) * 100 + '%';
+      tick.style.left = (i / n) * 100 + '%';
       const label = document.createElement('span');
-      label.textContent = sec.querySelector('h2')?.textContent.split(' ').slice(0, 2).join(' ') || sec.id;
+      label.textContent = d.label;
       tick.appendChild(label);
       track.appendChild(tick);
     });
@@ -735,23 +738,34 @@
       return m + ':' + s;
     }
 
+    // Якоря: верх каждого раздела и конец страницы. Между якорями прогресс линейный,
+    // поэтому ползунок всегда стоит у метки раздела, который сейчас на экране.
     function updateScrub() {
-      const start = sections[0].offsetTop;
-      const end = sections[sections.length - 1].offsetTop + sections[sections.length - 1].offsetHeight;
-      const total = Math.max(end - start, 1);
-      const progress = Math.min(Math.max((window.scrollY - start) / total, 0), 1);
+      const y = window.scrollY + 140;
+      const maxY = document.documentElement.scrollHeight - window.innerHeight + 140;
+      const anchors = sections.map((s) => s.getBoundingClientRect().top + window.scrollY);
+      anchors.push(Math.max(maxY, anchors[n - 1] + 1));
+      let progress = 0;
+      if (y >= anchors[0]) {
+        let i = 0;
+        while (i < n && y >= anchors[i + 1]) i++;
+        i = Math.min(i, n - 1);
+        const part = Math.min(Math.max((y - anchors[i]) / Math.max(anchors[i + 1] - anchors[i], 1), 0), 1);
+        progress = (i + part) / n;
+      }
       fill.style.width = (progress * 100) + '%';
       head.style.left = (progress * 100) + '%';
       timecode.textContent = formatTime(progress * 150);
     }
 
     document.addEventListener('scroll', () => requestAnimationFrame(updateScrub), { passive: true });
+    window.addEventListener('resize', updateScrub);
     updateScrub();
 
     track.addEventListener('click', (e) => {
       const rect = track.getBoundingClientRect();
       const ratio = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
-      const idx = Math.round(ratio * (sections.length - 1));
+      const idx = Math.min(Math.floor(ratio * n), n - 1);
       sections[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   } catch (e) {}
