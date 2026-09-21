@@ -1,11 +1,11 @@
-version: 1.1.0
+version: 1.2.0
 files:
-  - url: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.1.0/ScreenRecorderHD-1.1.0-arm64-mac.zip
-    sha512: qfLNugTrrq9rJMpivdjetV7bAaEJJdPrmMGKejfL+7uN3Rz+o2v9ncM2s4e5oeU/HCU0M2ktTFz7hsI4wUZAhw==
-    size: 149897090
-  - url: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.1.0/ScreenRecorderHD-1.1.0-arm64.dmg
-    sha512: EOTxHUqQ0vmSKekf92Fj5YqXNk3gLe0g3z/EvqfIZXQ9s0SdGZ9MfWVdq9RLdpVccbVI58tFUzNMioe7alBZYA==
-    size: 149356748
-path: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.1.0/ScreenRecorderHD-1.1.0-arm64-mac.zip
-sha512: qfLNugTrrq9rJMpivdjetV7bAaEJJdPrmMGKejfL+7uN3Rz+o2v9ncM2s4e5oeU/HCU0M2ktTFz7hsI4wUZAhw==
-releaseDate: '2026-09-17T15:00:10.793Z'
+  - url: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.2.0/ScreenRecorderHD-Mac-arm64.zip
+    sha512: VvrOXjZVGu6rVnqrgp/6xPNbDylMT4BjEeDFT+bet5hVOLtvPfYexPp4oIy0IrbnGRKN8ea867jrTWlyS97+tg==
+    size: 148811893
+  - url: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.2.0/ScreenRecorderHD-Mac-arm64.dmg
+    sha512: bFYz74bGyTWsUienfLyaJFXkQ/l6lyBgt8FZe1HS93waO5F0/GYjiJC0UP+TxvKF8VpWoCNunK50HgSff5KHPA==
+    size: 148256045
+path: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.2.0/ScreenRecorderHD-Mac-arm64.zip
+sha512: VvrOXjZVGu6rVnqrgp/6xPNbDylMT4BjEeDFT+bet5hVOLtvPfYexPp4oIy0IrbnGRKN8ea867jrTWlyS97+tg==
+releaseDate: '2026-09-21T00:32:01.581Z'
