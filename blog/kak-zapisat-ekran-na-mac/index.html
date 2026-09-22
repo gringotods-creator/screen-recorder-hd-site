@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Как записать экран на Mac (macOS): со звуком системы и микрофоном</title>
+<meta name="description" content="Как записать экран на Mac: встроенный инструмент «Экран» (Cmd+Shift+5), QuickTime Player и программа для записи со звуком системы и микрофоном. Что делать, если macOS пишет, что приложение повреждено." />
+<link rel="canonical" href="https://rekorderhd.ru/blog/kak-zapisat-ekran-na-mac/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Как записать экран на Mac (macOS): со звуком системы и микрофоном" />
+<meta property="og:description" content="Как записать экран на Mac: встроенный инструмент «Экран» (Cmd+Shift+5), QuickTime Player и программа для записи со звуком системы и микрофоном. Что делать, если macOS пишет, что приложение повреждено." />
+<meta property="og:locale" content="ru_RU" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<!-- Яндекс.Метрика, счётчик 112751075 -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(112751075, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112751075" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Как записать экран на Mac (macOS): со звуком системы и микрофоном", "description": "Как записать экран на Mac: встроенный инструмент «Экран» (Cmd+Shift+5), QuickTime Player и программа для записи со звуком системы и микрофоном. Что делать, если macOS пишет, что приложение повреждено.", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "inLanguage": "ru", "mainEntityOfPage": "https://rekorderhd.ru/blog/kak-zapisat-ekran-na-mac/", "author": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" }, "publisher": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" } }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://rekorderhd.ru/" }, { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://rekorderhd.ru/blog/" }, { "@type": "ListItem", "position": 3, "name": "Как записать экран на Mac" } ] }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    { "@type": "Question", "name": "Как быстро включить запись экрана на Mac?", "acceptedAnswer": { "@type": "Answer", "text": "Нажмите Cmd+Shift+5 — откроется панель «Экран» со снимками и записью. Выберите «Записать весь экран» или «Записать выделенную часть» и нажмите «Запись»." } },
+    { "@type": "Question", "name": "Почему во встроенной записи нет звука видео или музыки, которые играют на компьютере?", "acceptedAnswer": { "@type": "Answer", "text": "Панель «Экран» и QuickTime Player по умолчанию пишут микрофон, а не звук системы. В «Опциях» панели «Экран» на части версий macOS есть переключатель звука компьютера — если у вас его нет, встроенными средствами системный звук не записать, нужна отдельная программа." } },
+    { "@type": "Question", "name": "Что делать, если macOS пишет, что приложение повреждено?", "acceptedAnswer": { "@type": "Answer", "text": "Это защита Gatekeeper для приложений без платной подписи Apple, а не реальное повреждение файла. Откройте Терминал и выполните: xattr -cr \"/Applications/Экранный рекордер HD.app\" — затем запустите программу снова. Сделать это нужно один раз." } },
+    { "@type": "Question", "name": "Нужно ли отдельно разрешать доступ к экрану и микрофону?", "acceptedAnswer": { "@type": "Answer", "text": "Да. При первой записи macOS спросит разрешение. Если пропустили — откройте «Системные настройки → Конфиденциальность и безопасность» и включите программу в разделах «Запись экрана» и «Микрофон», затем перезапустите её." } }
+  ] }
+</script>
+<style>
+  :root { --bg:#12151b; --surface:#1b1f28; --surface2:#232838; --text:#eef0f4; --muted:#9aa2b5; --accent:#ff5a36; --accent2:#ffb454; --line:#2a2f3d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "IBM Plex Sans", system-ui, sans-serif; line-height: 1.7; font-size: 17px; }
+  a { color: var(--accent2); }
+  header.top { max-width: 1000px; margin: 0 auto; padding: 22px 16px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  header.top a.brand { color: var(--text); text-decoration: none; font-family: "Unbounded", sans-serif; font-size: 15px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(255,90,54,0.2); }
+  header.top nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+  header.top nav a:hover { color: var(--text); }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 64px; }
+  .crumbs { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .crumbs a { color: var(--muted); }
+  h1 { font-family: "Unbounded", sans-serif; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; margin: 0 0 16px; }
+  h2 { font-family: "Unbounded", sans-serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.25; margin: 48px 0 14px; }
+  h3 { font-size: 19px; margin: 28px 0 8px; }
+  p { margin: 0 0 16px; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .answer { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 18px 22px; margin: 22px 0 28px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 22px; margin: 0 0 12px; }
+  .toc b { display: block; margin-bottom: 6px; font-size: 15px; }
+  .toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+  .toc a { text-decoration: none; }
+  .tablewrap { overflow-x: auto; margin: 18px 0 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 15px; }
+  th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--surface2); font-weight: 600; }
+  td.yes { color: #7fdc9e; } td.no { color: #ff8e7a; }
+  ol.steps, ul.list { padding-left: 22px; margin: 0 0 16px; }
+  ol.steps li, ul.list li { margin-bottom: 8px; }
+  kbd { background: var(--surface2); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-family: "IBM Plex Mono", monospace; font-size: 14px; }
+  .note { background: rgba(255,180,84,0.08); border: 1px solid rgba(255,180,84,0.35); border-radius: 12px; padding: 14px 20px; margin: 20px 0; font-size: 15px; }
+  figure { margin: 22px 0; }
+  figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .cta { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 30px 0; }
+  .cta p { margin: 0 0 14px; }
+  .btn { display: inline-block; background: var(--accent); color: #16110d; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 10px; }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); margin-left: 8px; }
+  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 48px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 600px) { body { font-size: 16px; } .btn.ghost { margin: 10px 0 0; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><span class="dot"></span>Экранный рекордер HD</a>
+  <nav><a href="/blog/">Блог</a><a href="/#pricing">Цена</a></nav>
+</header>
+<main>
+  <div class="crumbs"><a href="/">Главная</a> / <a href="/blog/">Блог</a> / Как записать экран на Mac</div>
+  <h1>Как записать экран на Mac (macOS): со звуком системы и микрофоном</h1>
+  <div class="meta">Обновлено 23.09.2026 · чтение 7 минут</div>
+
+  <div class="answer"><p><b>Коротко.</b> Для быстрой записи без звука системы хватит встроенной панели «Экран»: <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd>. Если нужно, чтобы в записи одновременно был звук компьютера (музыка, видео, звонок) и ваш микрофон, встроенных средств обычно недостаточно — для этого нужна отдельная программа.</p></div>
+
+  <p>На Mac есть два способа записать экран «из коробки»: панель «Экран» и QuickTime Player. Оба быстрые и бесплатные, но у обоих одно и то же ограничение — без специальной настройки в запись попадает только микрофон, а не то, что звучит из динамиков. Разберём оба встроенных способа и что делать, если нужен звук компьютера вместе с голосом.</p>
+
+  <h2>Способ 1. Панель «Экран» (Cmd+Shift+5)</h2>
+  <ol class="steps">
+    <li>Нажмите <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd> — снизу экрана появится панель управления.</li>
+    <li>Выберите «Записать весь экран» или «Записать выделенную часть».</li>
+    <li>Нажмите «Опции» и выберите микрофон, если хотите записать голос. Если в списке опций есть пункт про звук компьютера — включите и его.</li>
+    <li>Нажмите «Запись». Чтобы остановить, щёлкните значок записи в строке меню сверху экрана или снова откройте панель сочетанием <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd> и нажмите «Стоп».</li>
+    <li>Готовый файл сохранится на рабочий стол.</li>
+  </ol>
+
+  <h2>Способ 2. QuickTime Player</h2>
+  <ol class="steps">
+    <li>Откройте QuickTime Player → «Файл» → «Новая запись экрана».</li>
+    <li>Рядом с кнопкой записи нажмите на стрелку вниз и выберите микрофон.</li>
+    <li>Нажмите на нужную область экрана, чтобы начать (весь экран или выделенная часть).</li>
+    <li>Остановите запись значком в строке меню и сохраните файл через «Файл → Экспортировать».</li>
+  </ol>
+  <div class="note">И панель «Экран», и QuickTime Player — это, по сути, одна и та же системная запись с разным интерфейсом. Возможность записать вместе со звуком компьютера зависит от версии macOS и того, есть ли в ваших «Опциях» соответствующий переключатель.</div>
+
+  <h2>Если нужен звук компьютера и голос одновременно</h2>
+  <p>Записать урок, созвон или обзор программы так, чтобы в видео был и звук с экрана, и ваш комментарий, во встроенных средствах не всегда просто: часть версий macOS такой встроенной возможности не даёт вовсе, и тогда нужен виртуальный аудио-драйвер и ручная настройка. Если не хочется в этом разбираться, проще открыть программу, где звук системы и микрофон включаются двумя галочками.</p>
+  <figure><img src="/blog/img/okno-programmy.webp" alt="Окно программы Экранный рекордер HD: источник записи, качество, микрофон и кнопка Начать запись" width="900" height="964" loading="lazy" /><figcaption>Окно программы: источник записи, качество, микрофон и звук системы в одном окне.</figcaption></figure>
+  <p>Так работает «Экранный рекордер HD» на Mac: выбираете экран или окно, включаете «Захватывать звук системы» и «Записывать микрофон», нажимаете «Начать запись» — получаете готовый MP4 с обоими источниками звука. Системный звук программа пишет на macOS 13 (Ventura) и новее. Как и на Windows, работает без интернета и аккаунта, <b>490 ₽ один раз, без подписки</b>, версия для Apple Silicon (M1, M2, M3 и новее).</p>
+
+  <h2>Если macOS пишет, что приложение «повреждено»</h2>
+  <p>У программы нет платной подписи разработчика Apple, поэтому Gatekeeper показывает предупреждение — это не значит, что файл на самом деле повреждён. Перетащите программу в «Программы», запустите, в первом предупреждении нажмите «Готово» (не «Переместить в Корзину»), затем откройте «Системные настройки → Конфиденциальность и безопасность» и внизу нажмите «Всё равно открыть». Если появляется именно слово «повреждено», откройте Терминал и выполните:</p>
+  <div class="note"><code>xattr -cr "/Applications/Экранный рекордер HD.app"</code><br>Сделать это нужно один раз, затем программа будет запускаться обычным двойным щелчком. Подробная инструкция с картинками — на <a href="/install-mac.html">странице установки для Mac</a>.</div>
+
+  <h2>Доступ к экрану и микрофону</h2>
+  <p>При первой записи macOS спросит разрешение на запись экрана и доступ к микрофону. Если пропустили запрос или отказали случайно, включите вручную: «Системные настройки → Конфиденциальность и безопасность» → разделы «Запись экрана» и «Микрофон» → включите переключатель для программы, затем перезапустите её.</p>
+
+  <div class="cta"><p><b>Запись экрана на Mac без лишних настроек.</b> Экран или окно, звук системы и микрофон — двумя галочками. 490 ₽ один раз, Windows и Mac.</p><a class="btn" href="/install-mac.html">Инструкция по установке на Mac</a><a class="btn ghost" href="/#pricing">Скачать и попробовать</a></div>
+
+  <h2>Частые вопросы</h2>
+  <details><summary>Как быстро включить запись экрана на Mac?</summary><p>Нажмите Cmd+Shift+5 — откроется панель «Экран» со снимками и записью. Выберите «Записать весь экран» или «Записать выделенную часть» и нажмите «Запись».</p></details>
+  <details><summary>Почему во встроенной записи нет звука видео или музыки, которые играют на компьютере?</summary><p>Панель «Экран» и QuickTime Player по умолчанию пишут микрофон, а не звук системы. В «Опциях» панели «Экран» на части версий macOS есть переключатель звука компьютера — если у вас его нет, встроенными средствами системный звук не записать, нужна отдельная программа.</p></details>
+  <details><summary>Что делать, если macOS пишет, что приложение повреждено?</summary><p>Это защита Gatekeeper для приложений без платной подписи Apple, а не реальное повреждение файла. Откройте Терминал и выполните: xattr -cr "/Applications/Экранный рекордер HD.app" — затем запустите программу снова. Сделать это нужно один раз.</p></details>
+  <details><summary>Нужно ли отдельно разрешать доступ к экрану и микрофону?</summary><p>Да. При первой записи macOS спросит разрешение. Если пропустили — откройте «Системные настройки → Конфиденциальность и безопасность» и включите программу в разделах «Запись экрана» и «Микрофон», затем перезапустите её.</p></details>
+</main>
+<footer>
+  <p>Статья подготовлена командой «Экранный рекордер HD». Инструкции по встроенным средствам операционных систем составлены по открытым источникам; сочетания клавиш и интерфейс могут отличаться в зависимости от версии системы. <a href="/">rekorderhd.ru</a></p>
+</footer>
+<script>
+(function(){document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(a.classList.contains('btn')||h.indexOf('/#pricing')===0){try{ym(112751075,'reachGoal','blog_cta',{page:location.pathname,target:h});}catch(_){}}});})();
+</script>
+</body>
+</html>
