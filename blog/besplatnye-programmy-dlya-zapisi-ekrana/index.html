@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Бесплатные программы для записи экрана: честное сравнение OBS, Bandicam, ShareX и других</title>
+<meta name="description" content="Сравнение бесплатных программ для записи экрана: OBS Studio, Bandicam, ShareX и встроенные средства Windows. Ограничения бесплатных версий и когда стоит взять платную программу." />
+<link rel="canonical" href="https://rekorderhd.ru/blog/besplatnye-programmy-dlya-zapisi-ekrana/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Бесплатные программы для записи экрана: честное сравнение и что выбрать" />
+<meta property="og:description" content="Сравнение бесплатных программ для записи экрана: OBS Studio, Bandicam, ShareX и встроенные средства Windows. Ограничения бесплатных версий и когда стоит взять платную программу." />
+<meta property="og:locale" content="ru_RU" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<!-- Яндекс.Метрика, счётчик 112751075 -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(112751075, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112751075" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Бесплатные программы для записи экрана: честное сравнение и что выбрать", "description": "Сравнение бесплатных программ для записи экрана: OBS Studio, Bandicam, ShareX и встроенные средства Windows. Ограничения бесплатных версий и когда стоит взять платную программу.", "datePublished": "2026-09-23", "dateModified": "2026-09-23", "inLanguage": "ru", "mainEntityOfPage": "https://rekorderhd.ru/blog/besplatnye-programmy-dlya-zapisi-ekrana/", "author": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" }, "publisher": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" } }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://rekorderhd.ru/" }, { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://rekorderhd.ru/blog/" }, { "@type": "ListItem", "position": 3, "name": "Бесплатные программы для записи экрана" } ] }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    { "@type": "Question", "name": "Какая бесплатная программа для записи экрана лучше?", "acceptedAnswer": { "@type": "Answer", "text": "Если нужна максимальная гибкость и не жаль потратить время на настройку — OBS Studio, она полностью бесплатна и без ограничений. Если нужно быстро записать один ролик без настройки — начните со встроенных средств Windows (Xbox Game Bar или «Ножницы»)." } },
+    { "@type": "Question", "name": "Правда ли, что у Bandicam есть ограничения в бесплатной версии?", "acceptedAnswer": { "@type": "Answer", "text": "Да, у бесплатной версии Bandicam ограничение по длительности одного ролика и водяной знак на видео. Для разовой короткой записи это не критично, для полноценного контента — обычно мешает." } },
+    { "@type": "Question", "name": "Чем ShareX отличается от OBS?", "acceptedAnswer": { "@type": "Answer", "text": "ShareX — бесплатная и с открытым кодом программа, изначально заточенная под скриншоты и быстрые записи экрана, а не под сложные многосценовые трансляции. Она проще OBS в настройке, но менее гибкая для стриминга." } },
+    { "@type": "Question", "name": "Когда вообще нужна платная программа, если есть бесплатные?", "acceptedAnswer": { "@type": "Answer", "text": "Когда важно не тратить время на настройку: бесплатные мощные программы вроде OBS требуют разобраться в сценах и источниках, а бесплатные простые — режут длительность или ставят водяной знак. Платная простая программа обычно экономит именно время, а не даёт функции, которых нет бесплатно." } }
+  ] }
+</script>
+<style>
+  :root { --bg:#12151b; --surface:#1b1f28; --surface2:#232838; --text:#eef0f4; --muted:#9aa2b5; --accent:#ff5a36; --accent2:#ffb454; --line:#2a2f3d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "IBM Plex Sans", system-ui, sans-serif; line-height: 1.7; font-size: 17px; }
+  a { color: var(--accent2); }
+  header.top { max-width: 1000px; margin: 0 auto; padding: 22px 16px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  header.top a.brand { color: var(--text); text-decoration: none; font-family: "Unbounded", sans-serif; font-size: 15px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(255,90,54,0.2); }
+  header.top nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+  header.top nav a:hover { color: var(--text); }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 64px; }
+  .crumbs { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .crumbs a { color: var(--muted); }
+  h1 { font-family: "Unbounded", sans-serif; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; margin: 0 0 16px; }
+  h2 { font-family: "Unbounded", sans-serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.25; margin: 48px 0 14px; }
+  h3 { font-size: 19px; margin: 28px 0 8px; }
+  p { margin: 0 0 16px; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .answer { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 18px 22px; margin: 22px 0 28px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 22px; margin: 0 0 12px; }
+  .toc b { display: block; margin-bottom: 6px; font-size: 15px; }
+  .toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+  .toc a { text-decoration: none; }
+  .tablewrap { overflow-x: auto; margin: 18px 0 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 15px; }
+  th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--surface2); font-weight: 600; }
+  td.yes { color: #7fdc9e; } td.no { color: #ff8e7a; }
+  ol.steps, ul.list { padding-left: 22px; margin: 0 0 16px; }
+  ol.steps li, ul.list li { margin-bottom: 8px; }
+  kbd { background: var(--surface2); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-family: "IBM Plex Mono", monospace; font-size: 14px; }
+  .note { background: rgba(255,180,84,0.08); border: 1px solid rgba(255,180,84,0.35); border-radius: 12px; padding: 14px 20px; margin: 20px 0; font-size: 15px; }
+  figure { margin: 22px 0; }
+  figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .cta { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 30px 0; }
+  .cta p { margin: 0 0 14px; }
+  .btn { display: inline-block; background: var(--accent); color: #16110d; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 10px; }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); margin-left: 8px; }
+  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 48px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 600px) { body { font-size: 16px; } .btn.ghost { margin: 10px 0 0; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><span class="dot"></span>Экранный рекордер HD</a>
+  <nav><a href="/blog/">Блог</a><a href="/#pricing">Цена</a></nav>
+</header>
+<main>
+  <div class="crumbs"><a href="/">Главная</a> / <a href="/blog/">Блог</a> / Бесплатные программы для записи экрана</div>
+  <h1>Бесплатные программы для записи экрана: честное сравнение и что выбрать</h1>
+  <div class="meta">Обновлено 23.09.2026 · чтение 8 минут</div>
+
+  <div class="answer"><p><b>Коротко.</b> Полностью бесплатно и без ограничений записывает экран <b>OBS Studio</b> — но требует времени на настройку сцен и источников. Встроенные средства Windows (Game Bar, «Ножницы») бесплатны и просты, но урезаны по возможностям. У бесплатных версий Bandicam и похожих программ обычно есть лимит по времени записи и водяной знак. Если не хочется ни настраивать, ни упираться в ограничения — есть платные простые программы вроде нашей.</p></div>
+
+  <p>Когда ищешь программу для записи экрана бесплатно, находится десяток вариантов, и не сразу понятно, чем они отличаются на практике. Разберём самые популярные бесплатные варианты честно: что каждый умеет, где у него предел и кому он подходит.</p>
+
+  <h2>Сравнение</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Программа</th><th>Цена</th><th>Ограничение бесплатной версии</th><th>Кому подходит</th></tr>
+    <tr><td><b>OBS Studio</b></td><td>Бесплатно полностью</td><td class="no">Нет ограничений, но нужна настройка сцен и источников</td><td>Стримерам и тем, кто готов один раз разобраться в настройках</td></tr>
+    <tr><td><b>Xbox Game Bar</b> / «Ножницы»</td><td>Бесплатно, встроено в Windows</td><td class="no">Пишет только окно приложения (Game Bar) или требует Windows 11 («Ножницы»)</td><td>Разовая быстрая запись без установки программ</td></tr>
+    <tr><td><b>Bandicam</b></td><td>Бесплатная версия + платная</td><td class="no">Лимит по времени ролика и водяной знак на видео</td><td>Короткие разовые ролики, если водяной знак не мешает</td></tr>
+    <tr><td><b>ShareX</b></td><td>Бесплатно полностью, открытый код</td><td class="no">Только Windows, меньше возможностей для многосценовых записей</td><td>Скриншоты и простая запись без лишних функций</td></tr>
+    <tr><td><b>Экранный рекордер HD</b></td><td>490 ₽ один раз</td><td class="no">Не бесплатная</td><td>Тем, кто хочет запись без настройки и без ограничений разом</td></tr>
+  </table></div>
+
+  <h2>OBS Studio: бесплатно и без ограничений, но с настройкой</h2>
+  <p>OBS Studio — самая мощная бесплатная программа для записи экрана и стриминга, с открытым кодом. Она пишет любой экран, окно или их сочетание, поддерживает несколько источников звука и сцен. Плата за это — придётся один раз настроить сцену: добавить источник «Захват экрана», подключить микрофон и звук рабочего стола отдельно в микшере. Для разовой задачи это избыточно, но если запись экрана — постоянная часть вашей работы, время на настройку окупается: дальше OBS полностью бесплатен и без скрытых ограничений.</p>
+
+  <h2>Bandicam и похожие программы: бесплатно, но с водяным знаком</h2>
+  <p>У части популярных программ для записи экрана есть бесплатная версия с ограничениями — например, ограничение по длительности одного ролика и водяной знак поверх видео. Убрать оба ограничения можно только в платной версии. Если вам нужна короткая разовая запись и водяной знак не критичен — бесплатной версии достаточно. Для регулярной записи или контента, который вы куда-то выкладываете, водяной знак обычно неприемлем, и приходится либо платить, либо искать программу без этого ограничения.</p>
+
+  <h2>ShareX: бесплатно и без знака, но только для Windows</h2>
+  <p>ShareX — бесплатная программа с открытым кодом, изначально сделанная для скриншотов, но умеющая и запись экрана в видео. У неё нет водяных знаков и лимитов по времени, но она заметно проще OBS по возможностям: меньше подходит для сложных сценариев со сменой источников и рассчитана больше на быструю фиксацию происходящего на экране, чем на подготовленную запись урока или обзора.</p>
+
+  <h2>Встроенные средства Windows: без установки, но с ограничениями</h2>
+  <p>Xbox Game Bar (<kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd>) и «Ножницы» (<kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>, только Windows 11) ничего не нужно устанавливать — они уже в системе. Ограничение то же, что и всегда: Game Bar пишет только окно приложения, а не рабочий стол, «Ножницы» есть не на всех версиях Windows. Подробный разбор обоих способов и как быть, если запись не запускается, — в отдельной статье о записи экрана на Windows.</p>
+  <figure><img src="/blog/img/okno-programmy.webp" alt="Окно программы Экранный рекордер HD: источник записи, качество, микрофон и кнопка Начать запись" width="900" height="964" loading="lazy" /><figcaption>Окно программы: источник записи, качество, микрофон и звук системы в одном окне.</figcaption></figure>
+
+  <h2>Когда бесплатного варианта не хватает</h2>
+  <p>У каждого бесплатного пути есть своя цена — не в деньгах, так во времени или ограничениях: OBS требует разобраться в настройке, у простых бесплатных программ — лимиты и водяные знаки, у встроенных средств — узкие возможности. Если вам просто нужно открыть программу, выбрать экран, включить звук компьютера и микрофон и нажать «Начать запись» — без обучения и без вырезанных функций, — для этого и существуют простые платные программы вроде «Экранного рекордера HD».</p>
+  <p><b>Мы не говорим, что бесплатные варианты плохие</b> — OBS, например, действительно ничем не хуже платных программ по возможностям. Речь именно про время на настройку и разбор интерфейса, которого может не быть, если запись нужна была ещё вчера.</p>
+  <p>«Экранный рекордер HD» записывает экран или окно, звук компьютера и микрофон одновременно, работает на Windows и Mac без интернета и аккаунта. <b>490 ₽ один раз, без подписки</b> — если понравится не с первого клика, установщик можно скачать бесплатно и посмотреть окно программы вживую, ключ активации приходит после оплаты.</p>
+
+  <div class="cta"><p><b>Устали разбираться в настройках?</b> Экран, звук компьютера и микрофон — двумя галочками. 490 ₽ один раз, Windows и Mac.</p><a class="btn" href="/#pricing">Скачать и попробовать</a><a class="btn ghost" href="/blog/zapis-ekrana-windows/">Все способы записи на Windows</a></div>
+
+  <h2>Частые вопросы</h2>
+  <details><summary>Какая бесплатная программа для записи экрана лучше?</summary><p>Если нужна максимальная гибкость и не жаль потратить время на настройку — OBS Studio, она полностью бесплатна и без ограничений. Если нужно быстро записать один ролик без настройки — начните со встроенных средств Windows (Xbox Game Bar или «Ножницы»).</p></details>
+  <details><summary>Правда ли, что у Bandicam есть ограничения в бесплатной версии?</summary><p>Да, у бесплатной версии Bandicam ограничение по длительности одного ролика и водяной знак на видео. Для разовой короткой записи это не критично, для полноценного контента — обычно мешает.</p></details>
+  <details><summary>Чем ShareX отличается от OBS?</summary><p>ShareX — бесплатная и с открытым кодом программа, изначально заточенная под скриншоты и быстрые записи экрана, а не под сложные многосценовые трансляции. Она проще OBS в настройке, но менее гибкая для стриминга.</p></details>
+  <details><summary>Когда вообще нужна платная программа, если есть бесплатные?</summary><p>Когда важно не тратить время на настройку: бесплатные мощные программы вроде OBS требуют разобраться в сценах и источниках, а бесплатные простые — режут длительность или ставят водяной знак. Платная простая программа обычно экономит именно время, а не даёт функции, которых нет бесплатно.</p></details>
+</main>
+<footer>
+  <p>Статья подготовлена командой «Экранный рекордер HD». Инструкции по встроенным средствам операционных систем составлены по открытым источникам; сочетания клавиш и интерфейс могут отличаться в зависимости от версии системы. <a href="/">rekorderhd.ru</a></p>
+</footer>
+<script>
+(function(){document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(a.classList.contains('btn')||h.indexOf('/#pricing')===0){try{ym(112751075,'reachGoal','blog_cta',{page:location.pathname,target:h});}catch(_){}}});})();
+</script>
+</body>
+</html>

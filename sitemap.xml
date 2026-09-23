@@ -58,4 +58,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://rekorderhd.ru/blog/besplatnye-programmy-dlya-zapisi-ekrana/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
