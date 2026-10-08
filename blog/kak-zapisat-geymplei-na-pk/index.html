@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Как записать геймплей на ПК без лагов: настройки для слабого компьютера</title>
+<meta name="description" content="Как записать игру на ПК, чтобы она не тормозила: Game Bar, оверлеи NVIDIA и AMD, OBS и простой рекордер. Настройки кадров и разрешения и что делать, если в записи чёрный экран." />
+<link rel="canonical" href="https://rekorderhd.ru/blog/kak-zapisat-geymplei-na-pk/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Как записать геймплей на ПК без лагов: настройки для слабого компьютера и способы записи" />
+<meta property="og:description" content="Как записать игру на ПК, чтобы она не тормозила: Game Bar, оверлеи NVIDIA и AMD, OBS и простой рекордер. Настройки кадров и разрешения и что делать, если в записи чёрный экран." />
+<meta property="og:locale" content="ru_RU" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<!-- Яндекс.Метрика, счётчик 112751075 -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(112751075, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112751075" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Как записать геймплей на ПК без лагов: настройки для слабого компьютера и способы записи", "description": "Как записать игру на ПК, чтобы она не тормозила: Game Bar, оверлеи NVIDIA и AMD, OBS и простой рекордер. Настройки кадров и разрешения и что делать, если в записи чёрный экран.", "datePublished": "2026-10-09", "dateModified": "2026-10-09", "inLanguage": "ru", "mainEntityOfPage": "https://rekorderhd.ru/blog/kak-zapisat-geymplei-na-pk/", "author": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" }, "publisher": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" } }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://rekorderhd.ru/" }, { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://rekorderhd.ru/blog/" }, { "@type": "ListItem", "position": 3, "name": "Как записать геймплей на ПК" } ] }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    { "@type": "Question", "name": "Почему при записи игры падает FPS?", "acceptedAnswer": { "@type": "Answer", "text": "Запись конкурирует с игрой за процессор, видеокарту и диск. Больше всего нагружает кодирование видео на процессоре, высокое разрешение и 60 кадров в секунду, а также запись на медленный диск. Помогает аппаратный кодировщик видеокарты, Full HD при 30 кадрах и запись на SSD." } },
+    { "@type": "Question", "name": "Какие настройки записи выбрать для слабого ПК?", "acceptedAnswer": { "@type": "Answer", "text": "Full HD (1080p) или даже 720p, 30 кадров в секунду, аппаратный кодировщик, запись на SSD и закрытые фоновые программы. Игру лучше запустить в оконном режиме или в окне без рамки." } },
+    { "@type": "Question", "name": "Как записать игру без OBS?", "acceptedAnswer": { "@type": "Answer", "text": "Подойдут Xbox Game Bar (Win+Alt+R), встроенная запись в программе видеокарты (приложение NVIDIA или AMD Software) или простой рекордер, где не нужно настраивать сцены и источники." } },
+    { "@type": "Question", "name": "Почему в записи игры чёрный экран?", "acceptedAnswer": { "@type": "Answer", "text": "Чаще всего игра запущена в «настоящем» полноэкранном режиме, который захватывают не все программы. Переключите её в оконный режим или «окно без рамки». В OBS вместо источника «Захват экрана» попробуйте «Захват игры»." } }
+  ] }
+</script>
+<style>
+  :root { --bg:#12151b; --surface:#1b1f28; --surface2:#232838; --text:#eef0f4; --muted:#9aa2b5; --accent:#ff5a36; --accent2:#ffb454; --line:#2a2f3d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: "IBM Plex Sans", system-ui, sans-serif; line-height: 1.7; font-size: 17px; }
+  a { color: var(--accent2); }
+  header.top { max-width: 1000px; margin: 0 auto; padding: 22px 16px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  header.top a.brand { color: var(--text); text-decoration: none; font-family: "Unbounded", sans-serif; font-size: 15px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(255,90,54,0.2); }
+  header.top nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+  header.top nav a:hover { color: var(--text); }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 64px; }
+  .crumbs { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .crumbs a { color: var(--muted); }
+  h1 { font-family: "Unbounded", sans-serif; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; margin: 0 0 16px; }
+  h2 { font-family: "Unbounded", sans-serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.25; margin: 48px 0 14px; }
+  h3 { font-size: 19px; margin: 28px 0 8px; }
+  p { margin: 0 0 16px; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .answer { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 18px 22px; margin: 22px 0 28px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 22px; margin: 0 0 12px; }
+  .toc b { display: block; margin-bottom: 6px; font-size: 15px; }
+  .toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+  .toc a { text-decoration: none; }
+  .tablewrap { overflow-x: auto; margin: 18px 0 8px; }
+  table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 15px; }
+  th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--surface2); font-weight: 600; }
+  td.yes { color: #7fdc9e; } td.no { color: #ff8e7a; }
+  ol.steps, ul.list { padding-left: 22px; margin: 0 0 16px; }
+  ol.steps li, ul.list li { margin-bottom: 8px; }
+  kbd { background: var(--surface2); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-family: "IBM Plex Mono", monospace; font-size: 14px; }
+  .note { background: rgba(255,180,84,0.08); border: 1px solid rgba(255,180,84,0.35); border-radius: 12px; padding: 14px 20px; margin: 20px 0; font-size: 15px; }
+  figure { margin: 22px 0; }
+  figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .cta { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 30px 0; }
+  .cta p { margin: 0 0 14px; }
+  .btn { display: inline-block; background: var(--accent); color: #16110d; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 10px; }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); margin-left: 8px; }
+  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 48px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 600px) { body { font-size: 16px; } .btn.ghost { margin: 10px 0 0; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><span class="dot"></span>Экранный рекордер HD</a>
+  <nav><a href="/blog/">Блог</a><a href="/#pricing">Цена</a></nav>
+</header>
+<main>
+  <div class="crumbs"><a href="/">Главная</a> / <a href="/blog/">Блог</a> / Как записать геймплей на ПК</div>
+  <h1>Как записать геймплей на ПК без лагов: настройки для слабого компьютера и способы записи</h1>
+  <div class="meta">Обновлено 09.10.2026 · чтение 8 минут</div>
+
+  <div class="answer"><p><b>Коротко.</b> Чтобы запись не просаживала FPS, записывайте в Full HD и 30 кадров в секунду, используйте аппаратный кодировщик видеокарты (в OBS это NVENC, AMF или Quick Sync, либо встроенная запись в программе NVIDIA или AMD), сохраняйте видео на SSD и закройте лишние программы. Игру лучше запускать в оконном режиме или в окне без рамки: иначе в записи может оказаться чёрный экран.</p></div>
+
+  <p>Игра идёт плавно, вы включаете запись — и кадры падают, звук хрипит, а в готовом видео картинка дёргается. Так бывает у многих: запись забирает те же ресурсы, что и сама игра. Разберём, где теряются кадры и как записать геймплей без лагов, в том числе на слабом компьютере. Общий обзор способов записи — в статье <a href="/blog/zapis-ekrana-windows/">Как сделать запись экрана на компьютере (ПК) с Windows</a>.</p>
+
+  <h2>Почему игра тормозит при записи</h2>
+  <ul class="list">
+    <li><b>Кодирование на процессоре.</b> Если видео сжимается процессором, он делит нагрузку с игрой. Аппаратный кодировщик видеокарты снимает большую её часть.</li>
+    <li><b>Высокое разрешение и 60 кадров.</b> 4K при 60 кадрах заметно тяжелее, чем Full HD при 30.</li>
+    <li><b>Диск.</b> Запись пишется непрерывным потоком. Если игра и видео лежат на одном медленном HDD, они мешают друг другу.</li>
+    <li><b>Фоновые программы.</b> Браузер с видео, мессенджеры, обновления и другие записи отнимают ресурсы.</li>
+    <li><b>Нехватка памяти.</b> Если оперативной или видеопамяти и так в обрез, запись добивает.</li>
+  </ul>
+
+  <h2>Настройки, которые снижают нагрузку</h2>
+  <ol class="steps">
+    <li><b>Full HD и 30 кадров в секунду.</b> Если игра идёт на пределе возможностей компьютера, начните с этого. 60 кадров добавляйте, только когда есть запас по мощности.</li>
+    <li><b>Аппаратный кодировщик.</b> Он есть в видеокартах NVIDIA, AMD и во встроенной графике Intel.</li>
+    <li><b>Запись на SSD</b> и достаточно свободного места: час записи в Full HD занимает от нескольких до десятков гигабайт в зависимости от настроек.</li>
+    <li><b>Оконный режим или окно без рамки.</b> Это снижает риск чёрного экрана и сбоев при переключении окон.</li>
+    <li><b>Закройте лишнее:</b> браузер, мессенджеры, торрент-клиенты.</li>
+    <li><b>Сделайте тест на 1–2 минуты</b> перед длинной записью: посмотрите, не упал ли FPS в игре и плавно ли идёт полученный файл.</li>
+  </ol>
+
+  <h2>Способы записи: сравнение</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Способ</th><th>Нагрузка на компьютер</th><th>Настройка</th><th>Кому подходит</th></tr>
+    <tr><td><b>Оверлей видеокарты</b><br>NVIDIA, AMD</td><td>Низкая: кодирует сама видеокарта</td><td>Минимальная, в приложении производителя</td><td>Тем, кто записывает игры на видеокарте этого производителя, бесплатно</td></tr>
+    <tr><td><b>Xbox Game Bar</b></td><td>Умеренная</td><td class="no">Почти не нужна, но пишет только окно игры</td><td>Быстрые записи без установки программ</td></tr>
+    <tr><td><b>OBS Studio</b></td><td>Низкая при аппаратном кодировщике</td><td class="no">Нужно настроить источник и кодировщик</td><td>Длинные записи, стримы, сложные сцены</td></tr>
+    <tr><td><b>Экранный рекордер HD</b></td><td>Умеренная, есть режим для слабых компьютеров</td><td>Выбрать режим и включить звук двумя галочками</td><td>Тем, кому нужна запись без настройки: экран или окно, звук игры и голос</td></tr>
+  </table></div>
+
+  <h2>Оверлеи NVIDIA и AMD: бесплатно и с низкой нагрузкой</h2>
+  <p>У видеокарт есть собственные средства записи: в приложении NVIDIA (раньше оно называлось GeForce Experience) и в AMD Software: Adrenalin Edition. Они кодируют видео на самой видеокарте, поэтому почти не нагружают процессор. Ограничения: работают только с видеокартой своего производителя и рассчитаны в первую очередь на игры, а не на запись рабочего стола.</p>
+
+  <h2>OBS: захват игры и аппаратный кодировщик</h2>
+  <ol class="steps">
+    <li>Добавьте источник «Захват игры» вместо «Захват экрана»: он обычно легче и лучше справляется с играми.</li>
+    <li>Откройте «Настройки → Вывод», выберите режим «Расширенный», вкладку «Запись» и в списке кодировщиков выберите аппаратный: NVIDIA NVENC, AMD или Quick Sync.</li>
+    <li>В разделе «Видео» выставьте выходное разрешение 1920×1080 и 30 или 60 кадров в секунду.</li>
+    <li>Если хотите подстраховаться от потери записи при сбое, выберите формат MKV, а после записи переведите файл в MP4 через «Файл → Remux записей».</li>
+  </ol>
+
+  <h2>Чёрный экран вместо игры</h2>
+  <ol class="steps">
+    <li>Переключите игру в оконный режим или «окно без рамки» в её настройках графики.</li>
+    <li>В OBS используйте источник «Захват игры».</li>
+    <li>Если игра запущена от имени администратора, запускайте программу записи так же: иначе она может не видеть окно игры.</li>
+  </ol>
+
+  <h2>Простая запись без настройки</h2>
+  <p>Если не хочется разбираться с кодировщиками и источниками, подойдёт простой рекордер. В «Экранном рекордере HD» выберите режим «Слабый компьютер: Full HD, 30 кадров/с, быстрая обработка», укажите экран или окно игры, включите звук компьютера и микрофон и нажмите «Начать запись». Видео пишется сразу на диск, поэтому длинная игровая сессия не копится в памяти.</p>
+  <div class="note"><b>Честно о возможностях.</b> У программы нет выбора аппаратного кодировщика, как в OBS, поэтому на очень слабом или перегруженном компьютере OBS с NVENC или оверлей видеокарты могут дать меньшую нагрузку. Если игра в «настоящем» полноэкранном режиме даёт чёрный кадр, переведите её в оконный режим и сделайте минутный тест перед длинной записью.</div>
+  <p><b>490 ₽ один раз, без подписки</b>, Windows и Mac. Установщик можно скачать бесплатно и посмотреть окно программы, ключ активации приходит после оплаты. Если вы записываете геймплей для своего канала, о том, куда выкладывать видео и как на этом зарабатывать, мы писали в статье <a href="/blog/kak-zarabotat-na-zapisi-ekrana/">Как заработать на видео с записью экрана</a>.</p>
+
+  <div class="cta"><p><b>Запись игры без возни с настройками.</b> Режим для слабого компьютера, звук игры и голос в одном файле. 490 ₽ один раз, без подписки.</p><a class="btn" href="/#pricing">Скачать и попробовать</a><a class="btn ghost" href="/blog/zapis-ekrana-na-noutbuke/">Запись экрана без тормозов</a></div>
+
+  <h2>Частые вопросы</h2>
+  <details><summary>Почему при записи игры падает FPS?</summary><p>Запись конкурирует с игрой за процессор, видеокарту и диск. Больше всего нагружает кодирование видео на процессоре, высокое разрешение и 60 кадров в секунду, а также запись на медленный диск. Помогает аппаратный кодировщик видеокарты, Full HD при 30 кадрах и запись на SSD.</p></details>
+  <details><summary>Какие настройки записи выбрать для слабого ПК?</summary><p>Full HD (1080p) или даже 720p, 30 кадров в секунду, аппаратный кодировщик, запись на SSD и закрытые фоновые программы. Игру лучше запустить в оконном режиме или в окне без рамки.</p></details>
+  <details><summary>Как записать игру без OBS?</summary><p>Подойдут Xbox Game Bar (Win+Alt+R), встроенная запись в программе видеокарты (приложение NVIDIA или AMD Software) или простой рекордер, где не нужно настраивать сцены и источники.</p></details>
+  <details><summary>Почему в записи игры чёрный экран?</summary><p>Чаще всего игра запущена в «настоящем» полноэкранном режиме, который захватывают не все программы. Переключите её в оконный режим или «окно без рамки». В OBS вместо источника «Захват экрана» попробуйте «Захват игры».</p></details>
+</main>
+<footer>
+  <p>Статья подготовлена командой «Экранный рекордер HD». Инструкции по встроенным средствам операционных систем составлены по открытым источникам; сочетания клавиш и интерфейс могут отличаться в зависимости от версии системы. <a href="/">rekorderhd.ru</a></p>
+</footer>
+<script>
+(function(){document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';if(a.classList.contains('btn')||h.indexOf('/#pricing')===0){try{ym(112751075,'reachGoal','blog_cta',{page:location.pathname,target:h});}catch(_){}}});})();
+</script>
+</body>
+</html>
