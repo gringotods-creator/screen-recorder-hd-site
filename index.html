@@ -166,6 +166,10 @@
   .feature h3 { font-size: 16px; font-family: 'IBM Plex Sans'; font-weight: 600; margin-bottom: 8px; }
   .feature p { color: var(--muted); font-size: 14px; line-height: 1.55; margin: 0; }
 
+  .feature-new { background: var(--surface-2); }
+  .feature .idx { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .feature-badge { border: 1px solid var(--accent-2); border-radius: 999px; padding: 3px 8px; font-size: 10px; line-height: 1.3; }
+
   /* comparison spec sheet */
   .spec-sheet { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
   .spec-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; }
@@ -390,19 +394,22 @@
 
   <section id="features" class="reveal">
     <div class="section-head">
-      <h2>Всё нужное — без лишних панелей</h2>
-      <p>То, что реально используется при записи демо, уроков и отчётов клиентам.</p>
+      <h2>От записи до готового ролика — в одной программе</h2>
+      <p>Запишите экран, уберите лишнее и добавьте субтитры. Новые возможности версии 1.3 уже включены в программу.</p>
     </div>
     <div class="features-grid">
-      <div class="feature"><div class="idx">01</div><h3>HD и 4K, 30/60 fps</h3><p>Разрешение и частота кадров под ваш компьютер и задачу.</p></div>
-      <div class="feature"><div class="idx">02</div><h3>Звук + микрофон одновременно</h3><p>То, что играет на компьютере, и ваш голос — в одной дорожке, без миксеров.</p></div>
-      <div class="feature"><div class="idx">03</div><h3>Пишет сразу на диск</h3><p>Можно писать часами — видео сохраняется по ходу, не копится в памяти.</p></div>
-      <div class="feature"><div class="idx">04</div><h3>Горячие клавиши и пауза</h3><p>Старт, пауза и стоп с клавиатуры (Ctrl+Alt+R), управление из значка в трее. Окно программы в кадр не попадает.</p></div>
-      <div class="feature"><div class="idx">05</div><h3>Комментарий к записи</h3><p>Текстовая заметка рядом с видео — не потеряетесь в папке из 40 файлов.</p></div>
-      <div class="feature"><div class="idx">06</div><h3>Работает офлайн</h3><p>Ни аккаунта, ни интернета — всё считается и пишется локально.</p></div>
-      <div class="feature"><div class="idx">07</div><h3>Отсчёт 3-2-1</h3><p>Успеете приготовиться: окно программы сворачивается само, запись стартует после отсчёта.</p></div>
-      <div class="feature"><div class="idx">08</div><h3>Шкалы звука</h3><p>Видно, слышит ли программа микрофон и звук компьютера. Кнопка проверки за 10 секунд, чтобы не записать тишину.</p></div>
-      <div class="feature"><div class="idx">09</div><h3>Быстрая обработка</h3><p>Режим «Быстрая»: готовый MP4 почти сразу после остановки, даже на слабом ноутбуке.</p></div>
+      <div class="feature feature-new"><div class="idx">01 <span class="feature-badge">Новое в 1.3</span></div><h3>Видеоредактор прямо в программе</h3><p>Обрезайте видео двумя ручками, разрезайте и удаляйте ненужные фрагменты. Увеличивайте таймлайн и отменяйте действия. Монтаж сохраняется автоматически, исходное видео остаётся у вас.</p></div>
+      <div class="feature feature-new"><div class="idx">02 <span class="feature-badge">Новое в 1.3</span></div><h3>Речь — в готовые субтитры</h3><p>Распознавайте русскую речь офлайн и исправляйте текст прямо в редакторе. Выбирайте шрифт, цвет, размер и стиль. Встраивайте субтитры в MP4 или сохраняйте отдельным файлом SRT.</p></div>
+      <div class="feature feature-new"><div class="idx">03 <span class="feature-badge">Новое в 1.3</span></div><h3>Суфлёр, который слушает вас</h3><p>Загрузите сценарий и читайте 2–3 строки вверху экрана во время записи. Суфлёр подсвечивает произносимые слова и сохраняет место при паузе. Можно выбрать обычную прокрутку с нужной скоростью.</p></div>
+      <div class="feature"><div class="idx">04</div><h3>HD и 4K, 30/60 fps</h3><p>Разрешение и частота кадров под ваш компьютер и задачу.</p></div>
+      <div class="feature"><div class="idx">05</div><h3>Звук + микрофон одновременно</h3><p>То, что играет на компьютере, и ваш голос — в одной дорожке, без миксеров.</p></div>
+      <div class="feature"><div class="idx">06</div><h3>Пишет сразу на диск</h3><p>Можно писать часами — видео сохраняется по ходу, не копится в памяти.</p></div>
+      <div class="feature"><div class="idx">07</div><h3>Горячие клавиши и пауза</h3><p>Старт, пауза и стоп с клавиатуры (Ctrl+Alt+R), управление из значка в трее. Окно программы в кадр не попадает.</p></div>
+      <div class="feature"><div class="idx">08</div><h3>Комментарий к записи</h3><p>Текстовая заметка рядом с видео — не потеряетесь в папке из 40 файлов.</p></div>
+      <div class="feature"><div class="idx">09</div><h3>Работает офлайн</h3><p>Ни аккаунта, ни интернета — всё считается и пишется локально.</p></div>
+      <div class="feature"><div class="idx">10</div><h3>Отсчёт 3-2-1</h3><p>Успеете приготовиться: окно программы сворачивается само, запись стартует после отсчёта.</p></div>
+      <div class="feature"><div class="idx">11</div><h3>Шкалы звука</h3><p>Видно, слышит ли программа микрофон и звук компьютера. Кнопка проверки за 10 секунд, чтобы не записать тишину.</p></div>
+      <div class="feature"><div class="idx">12</div><h3>Быстрая обработка</h3><p>Режим «Быстрая»: готовый MP4 почти сразу после остановки, даже на слабом ноутбуке.</p></div>
     </div>
   </section>
 
