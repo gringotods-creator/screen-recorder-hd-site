@@ -1,8 +1,8 @@
-version: 1.2.0
+version: 1.3.0
 files:
-  - url: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.2.0/ScreenRecorderHD-Windows-Setup.exe
-    sha512: SUJ6EPlMa354YjxoJ1Y+AD1UdpODIm6oBHObvAnHE+Kb1q+80uMNvZlj7ZPe1jQjLzuUrUr4Zsivb0yZTb1/DQ==
-    size: 133840794
-path: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.2.0/ScreenRecorderHD-Windows-Setup.exe
-sha512: SUJ6EPlMa354YjxoJ1Y+AD1UdpODIm6oBHObvAnHE+Kb1q+80uMNvZlj7ZPe1jQjLzuUrUr4Zsivb0yZTb1/DQ==
-releaseDate: '2026-09-21T00:32:01.580Z'
+  - url: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.3.0/ScreenRecorderHD-Windows-Setup.exe
+    sha512: t2nlhMBX/50ok5SKPliI6nlmMW2pim5q/8K13nvHaVFgDvMyxHyv96j7A/t7Pi+Nv2aZSd1yXPgNo8xEDRSiFw==
+    size: 182154430
+path: https://github.com/gringotods-creator/screen-recorder-hd-site/releases/download/v1.3.0/ScreenRecorderHD-Windows-Setup.exe
+sha512: t2nlhMBX/50ok5SKPliI6nlmMW2pim5q/8K13nvHaVFgDvMyxHyv96j7A/t7Pi+Nv2aZSd1yXPgNo8xEDRSiFw==
+releaseDate: '2026-11-10T11:10:23.552Z'
