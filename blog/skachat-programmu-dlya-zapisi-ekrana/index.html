@@ -13,16 +13,75 @@
 <meta property="og:locale" content="ru_RU" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<!-- Яндекс.Метрика, счётчик 112751075 -->
+<!-- Яндекс.Метрика, счётчик 112751075: загружается только после согласия -->
 <script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-   ym(112751075, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+(function () {
+  var consentKey = 'srhd-metrika-consent-v1';
+  var accepted = localStorage.getItem(consentKey) === 'accepted';
+  var rejected = localStorage.getItem(consentKey) === 'rejected';
+
+  function loadMetrika() {
+    if (window.__srhdMetrikaLoaded) return;
+    window.__srhdMetrikaLoaded = true;
+    window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
+    window.ym.l = 1 * new Date();
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://mc.yandex.ru/metrika/tag.js';
+    script.onload = function () {
+      window.ym(112751075, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+      });
+    };
+    document.head.appendChild(script);
+  }
+
+  function showBanner() {
+    if (document.getElementById('srhdCookieBanner') || accepted || rejected) return;
+    var banner = document.createElement('aside');
+    banner.id = 'srhdCookieBanner';
+    banner.className = 'srhd-cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Настройки аналитики');
+    banner.innerHTML = '<div><strong>Настройки аналитики</strong><p>Мы используем Яндекс Метрику, чтобы понимать посещаемость сайта и улучшать его. Метрика обрабатывает технические данные посещения и cookie. Подробнее — в <a href="/privacy.html">политике конфиденциальности</a>.</p></div><div class="srhd-cookie-actions"><button type="button" data-srhd-cookie="reject">Отказаться</button><button type="button" class="primary" data-srhd-cookie="accept">Согласен</button></div>';
+    document.body.appendChild(banner);
+    banner.addEventListener('click', function (event) {
+      var button = event.target.closest('[data-srhd-cookie]');
+      if (!button) return;
+      var choice = button.getAttribute('data-srhd-cookie');
+      localStorage.setItem(consentKey, choice === 'accept' ? 'accepted' : 'rejected');
+      banner.remove();
+      if (choice === 'accept') loadMetrika();
+    });
+  }
+
+  function showSettings() {
+    localStorage.removeItem(consentKey);
+    accepted = false;
+    rejected = false;
+    showBanner();
+  }
+
+  window.srhdCookieSettings = showSettings;
+  document.addEventListener('DOMContentLoaded', function () {
+    if (accepted) loadMetrika();
+    else if (!rejected) showBanner();
+    var footer = document.querySelector('footer');
+    if (footer && !document.getElementById('srhdCookieSettings')) {
+      var link = document.createElement('a');
+      link.id = 'srhdCookieSettings';
+      link.href = '#cookie-settings';
+      link.textContent = 'Настройки cookies';
+      link.addEventListener('click', function (event) { event.preventDefault(); showSettings(); });
+      footer.appendChild(document.createTextNode(' · '));
+      footer.appendChild(link);
+    }
+  });
+})();
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/112751075" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <script type="application/ld+json">
 { "@context": "https://schema.org", "@type": "BlogPosting", "headline": "Скачать программу для записи экрана на ПК: где брать безопасно и что выбрать", "description": "Где скачать программу для записи экрана на компьютер без вирусов: официальные источники OBS и ShareX, встроенные средства Windows. Как проверить файл и чем рискуют, скачивая «взломанные» версии.", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "inLanguage": "ru", "mainEntityOfPage": "https://rekorderhd.ru/blog/skachat-programmu-dlya-zapisi-ekrana/", "author": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" }, "publisher": { "@type": "Organization", "name": "Экранный рекордер HD", "url": "https://rekorderhd.ru/" } }
 </script>
@@ -82,6 +141,9 @@
   details p { margin: 10px 0 0; color: var(--muted); }
   footer { max-width: 760px; margin: 0 auto; padding: 0 16px 48px; color: var(--muted); font-size: 13px; }
   @media (max-width: 600px) { body { font-size: 16px; } .btn.ghost { margin: 10px 0 0; } }
+</style>
+<style>
+.srhd-cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1080px;margin:0 auto;padding:16px 18px;background:rgba(27,31,40,.98);border:1px solid #363e4d;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.35);color:#edf1f8;font:14px 'IBM Plex Sans',system-ui,sans-serif}.srhd-cookie-banner strong{font-family:Unbounded,system-ui,sans-serif;font-size:13px}.srhd-cookie-banner p{margin:6px 0 0;color:#9ba7bd;font-size:13px;line-height:1.45}.srhd-cookie-banner a{color:#ffcb8c}.srhd-cookie-actions{display:flex;flex:0 0 auto;gap:8px}.srhd-cookie-actions button{border:1px solid #363e4d;border-radius:8px;padding:9px 13px;background:transparent;color:#edf1f8;cursor:pointer}.srhd-cookie-actions button.primary{background:#ff684b;border-color:#ff684b;color:#1c1412;font-weight:700}@media(max-width:680px){.srhd-cookie-banner{left:10px;right:10px;bottom:10px;display:block}.srhd-cookie-actions{margin-top:12px}}
 </style>
 </head>
 <body>
